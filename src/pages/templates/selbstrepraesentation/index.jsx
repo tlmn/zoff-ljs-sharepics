@@ -7,6 +7,7 @@ import Template0 from "../../../templates/selbstrepraesentation/slide-0/template
 import Template1 from "../../../templates/selbstrepraesentation/slide-1/template";
 import Template2 from "../../../templates/selbstrepraesentation/slide-2/template";
 import TemplateLayout from "../../../components/templateLayout";
+import { downloadZip } from "../../../lib/lib";
 
 export default () => {
   const [state, setState] = useState({
@@ -89,6 +90,18 @@ export default () => {
               return null;
           }
         })}
+      </div>
+      <div className="col-span-12">
+        <button
+          type="button"
+          className="btn btn-download"
+          style={{ width: "10rem" }}
+          state={state}
+          setState={setState}
+          onClick={() => downloadZip()}
+        >
+          download zip
+        </button>
       </div>
       <div className="col-span-3">
         <ControlsLeft state={state} setState={setState} />
