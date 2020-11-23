@@ -1,10 +1,8 @@
-import React, { useRef } from "react";
-
 import DraggableBg from "../../../components/inputs/draggableBg";
+import React from "react";
 import { getColor } from "../../../lib/lib";
 
 export default ({ state, setState, thumbnail = false }) => {
-  const draggableRef = useRef(null);
   return (
     <div className={`${!thumbnail ? `col-span-6` : ``} relative`}>
       <div
