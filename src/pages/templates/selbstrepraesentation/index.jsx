@@ -96,9 +96,7 @@ export default () => {
           type="button"
           className="btn btn-download"
           style={{ width: "10rem" }}
-          state={state}
-          setState={setState}
-          onClick={() => downloadZip()}
+          onClick={() => downloadZip({ state, setState })}
         >
           download zip
         </button>
