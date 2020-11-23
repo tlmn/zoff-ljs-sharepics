@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import { getProperty, updateProperty } from "../../lib/lib";
+import React, { useRef } from "react";
 
 import Draggable from "react-draggable";
+import { updateProperty } from "../../lib/lib";
 
 export default ({ state, setState, propertyPath }) => {
   const refDraggable = useRef(null);
