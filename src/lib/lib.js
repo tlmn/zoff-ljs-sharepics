@@ -40,10 +40,12 @@ export const getPrimaryColor = (currentState) => {
     .value;
 };
 
-export const updateProperty = ({ state, setState }, path, newValue) => {
-  let prevState = cloneDeepWith(state);
-  set(prevState, path, newValue);
-  setState(prevState);
+export const updateProperty = ({ setState }, path, newValue) => {
+  setState((prev) => {
+    let prevCloned = cloneDeepWith(prev);
+    set(prevCloned, path, newValue);
+    return prevCloned;
+  });
 };
 
 export const getProperty = ({ state }, path) => {

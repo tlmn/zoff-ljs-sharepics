@@ -12,7 +12,7 @@ const Input = ({ propertyPath, label, ...props }) => {
         type="text"
         value={getProperty({ state }, propertyPath)}
         onChange={(e) =>
-          updateProperty({ state, setState }, propertyPath, e.target.value)
+          updateProperty({ setState }, propertyPath, e.target.value)
         }
         id={propertyPath}
         {...props}

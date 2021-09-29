@@ -17,7 +17,7 @@ const BGImage = ({ currentSlide }) => {
         onChange={(e) =>
           e.target.files[0] !== null &&
           updateProperty(
-            { state, setState },
+            { setState },
             `slides[${currentSlide}].data.image.url`,
             URL.createObjectURL(e.target.files[0])
           )

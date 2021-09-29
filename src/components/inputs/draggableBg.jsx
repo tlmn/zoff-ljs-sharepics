@@ -11,13 +11,13 @@ const DraggableBG = ({ propertyPath }) => {
     <>
       <Draggable
         onStart={(e, data) => {
-          updateProperty({ state, setState }, propertyPath, {
+          updateProperty({ setState }, propertyPath, {
             x: data.x,
             y: data.y,
           });
         }}
         onDrag={(e, data) => {
-          updateProperty({ state, setState }, propertyPath, {
+          updateProperty({ setState }, propertyPath, {
             x: data.x,
             y: data.y,
           });
