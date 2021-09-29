@@ -12,19 +12,19 @@ module.exports = {
       "./src/**/*.tsx",
     ],
     options: {
-      whitelist: ["items-start", "items-center", "items-end"],
+      safelist: ["items-start", "items-center", "items-end"],
     },
   },
   theme: {
     extend: {},
     colors: {
       darkGray: {
-        default: "#252525",
+        DEFAULT: "#252525",
         lighter: lighten("#252525", 0.8),
       },
       lightGray: "#858585",
       red: "#E2190C",
-      turquoise: { default: "#00FFC2", lighter: darken("#00FFC2", 0.15) },
+      turquoise: { DEFAULT: "#00FFC2", lighter: darken("#00FFC2", 0.15) },
       violet: "#C9CEFF",
       white: "#fff",
       black: "#000",

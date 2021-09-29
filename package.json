@@ -4,13 +4,11 @@
   "version": "1.1",
   "author": "mail@tlmn.io",
   "dependencies": {
-    "autoprefixer": "^10.3.6",
     "emoji-regex": "^8.0.0",
     "file-saver": "^2.0.5",
     "gatsby": "^3.14.0",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-manifest": "^3.14.0",
-    "gatsby-plugin-postcss": "^4.14.0",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
     "gatsby-plugin-react-helmet": "^4.14.0",
     "gatsby-plugin-resolve-src": "^2.1.0",
@@ -18,7 +16,7 @@
     "gatsby-source-filesystem": "^3.14.0",
     "gatsby-transformer-sharp": "^3.14.0",
     "html-to-image": "^1.8.5",
-    "postcss": "^8.3.8",
+    "postcss-import": "^14.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
     "react-div-100vh": "^0.6.0",
@@ -26,8 +24,7 @@
     "react-draggable": "^4.4.4",
     "react-helmet": "^6.1.0",
     "react-images-upload": "^1.2.8",
-    "react-slugify": "^2.0.4",
-    "tailwindcss": "^2.2.16"
+    "react-slugify": "^2.0.4"
   },
   "license": "MIT",
   "scripts": {
@@ -37,5 +34,11 @@
     "format": "Get started formatting your code with Eslint, Prettier, and stylelint",
     "start": "yarn develop",
     "serve": "gatsby serve"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.6",
+    "gatsby-plugin-postcss": "^4.14.0",
+    "postcss": "^8.3.8",
+    "tailwindcss": "^2.2.16"
   }
 }
