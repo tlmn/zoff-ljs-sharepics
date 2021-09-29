@@ -19,6 +19,7 @@ export const html2image = async ({ state, setState }, fileName = "solid") => {
       setState({ ...state, templateScale: true });
     });
 };
+
 export const formatEmojis = (text = "") => {
   return text.replace(
     emojiRegex(),
