@@ -9,7 +9,7 @@ import Template2 from "../../../templates/mitglieder/slide-2/template";
 import TemplateContext from "../../../components/templateContext";
 import TemplateLayout from "../../../components/templateLayout";
 
-export default () => {
+const PageMitglieder = () => {
   const [state, setState] = useState({
     currentSlide: 0,
     slides: [
@@ -58,9 +58,7 @@ export default () => {
                     onClick={() => setState({ ...state, currentSlide: i })}
                     className="is-thumbnail hover:opacity-75"
                   >
-                    <Template0
-                      thumbnail={true}
-                    />
+                    <Template0 thumbnail={true} />
                   </button>
                 );
               case 1:
@@ -69,9 +67,7 @@ export default () => {
                     onClick={() => setState({ ...state, currentSlide: i })}
                     className="is-thumbnail hover:opacity-75"
                   >
-                    <Template1
-                      thumbnail={true}
-                    />
+                    <Template1 thumbnail={true} />
                   </button>
                 );
               case 2:
@@ -80,9 +76,7 @@ export default () => {
                     onClick={() => setState({ ...state, currentSlide: i })}
                     className="is-thumbnail hover:opacity-75"
                   >
-                    <Template2
-                      thumbnail={true}
-                    />
+                    <Template2 thumbnail={true} />
                   </button>
                 );
               default:
@@ -104,3 +98,5 @@ export default () => {
     </TemplateContext.Provider>
   );
 };
+
+export default PageMitglieder;

@@ -4,7 +4,7 @@ import DraggableBg from "../../../components/inputs/draggableBg";
 import TemplateContext from "../../../components/templateContext";
 import { getPrimaryColor } from "../../../lib/lib";
 
-export default ({ thumbnail = false }) => {
+const Template = ({ thumbnail = false }) => {
   const [state] = useContext(TemplateContext);
   return (
     <div className={`${!thumbnail ? `col-span-6` : ``} relative`}>
@@ -42,3 +42,5 @@ export default ({ thumbnail = false }) => {
     </div>
   );
 };
+
+export default Template;

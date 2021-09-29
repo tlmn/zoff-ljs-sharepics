@@ -7,7 +7,7 @@ import {
 
 import TemplateContext from "../templateContext";
 
-export default () => {
+const ColorThemesSelect = () => {
   const [state, setState] = useContext(TemplateContext);
   return (
     <>
@@ -114,3 +114,5 @@ export default () => {
     </>
   );
 };
+
+export default ColorThemesSelect;

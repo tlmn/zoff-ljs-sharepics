@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import TemplateContext from "../templateContext";
 import { primaryColors } from "../../config/vars";
 
-export default () => {
+const ColorSelect = () => {
   const [state, setState] = useContext(TemplateContext);
 
   return (
@@ -41,3 +41,5 @@ export default () => {
     </>
   );
 };
+
+export default ColorSelect;

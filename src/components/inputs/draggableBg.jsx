@@ -4,7 +4,7 @@ import Draggable from "react-draggable";
 import TemplateContext from "../templateContext";
 import { updateProperty } from "../../lib/lib";
 
-export default ({ propertyPath }) => {
+const DraggableBG = ({ propertyPath }) => {
   const [state, setState] = useContext(TemplateContext);
   const refDraggable = useRef(null);
   return (
@@ -34,3 +34,5 @@ export default ({ propertyPath }) => {
     </>
   );
 };
+
+export default DraggableBG;

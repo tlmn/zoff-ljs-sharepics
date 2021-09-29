@@ -3,7 +3,7 @@ import DownloadButton from "../../../components/inputs/downloadButton";
 import Input from "../../../components/inputs/input";
 import React from "react";
 
-export default () => {
+const ControlsRight = () => {
   const currentSlide = 1;
   return (
     <>
@@ -20,3 +20,5 @@ export default () => {
     </>
   );
 };
+
+export default ControlsRight;

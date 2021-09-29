@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({ height, ...props }) => (
+const Reset = ({ height, ...props }) => (
   <svg x="0px" y="0px" viewBox="0 0 426.667 426.667" height={height} {...props}>
     <path
       d="M213.333,85.333V0L106.667,106.667l106.667,106.667V128c70.72,0,128,57.28,128,128s-57.28,128-128,128s-128-57.28-128-128
@@ -8,3 +8,5 @@ export default ({ height, ...props }) => (
     />
   </svg>
 );
+
+export default Reset;

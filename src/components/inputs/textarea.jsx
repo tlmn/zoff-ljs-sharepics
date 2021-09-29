@@ -3,7 +3,7 @@ import { getProperty, updateProperty } from "../../lib/lib";
 
 import TemplateContext from "../templateContext";
 
-export default ({ propertyPath, label, ...props }) => {
+const Textarea = ({ propertyPath, label, ...props }) => {
   const [state, setState] = useContext(TemplateContext);
   return (
     <>
@@ -20,3 +20,5 @@ export default ({ propertyPath, label, ...props }) => {
     </>
   );
 };
+
+export default Textarea;

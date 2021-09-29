@@ -6,7 +6,7 @@ import Template from "../../../templates/zitat/template";
 import TemplateContext from "../../../components/templateContext";
 import TemplateLayout from "../../../components/templateLayout";
 
-export default () => {
+const PageZitat = () => {
   const [state, setState] = useState({
     currentSlide: 0,
     slides: [
@@ -42,3 +42,5 @@ export default () => {
     </TemplateContext.Provider>
   );
 };
+
+export default PageZitat;

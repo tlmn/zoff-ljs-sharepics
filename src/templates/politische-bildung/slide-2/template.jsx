@@ -4,7 +4,7 @@ import LogoText from "../../../assets/svg/logo-text";
 import TemplateContext from "../../../components/templateContext";
 import { getPrimaryColor } from "../../../lib/lib";
 
-export default ({ thumbnail = false }) => {
+const Template = ({ thumbnail = false }) => {
   const currentSlide = 2;
   const [state] = useContext(TemplateContext);
   return (
@@ -50,3 +50,5 @@ export default ({ thumbnail = false }) => {
     </div>
   );
 };
+
+export default Template;

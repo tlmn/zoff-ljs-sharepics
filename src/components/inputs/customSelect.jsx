@@ -4,7 +4,7 @@ import { getProperty, updateProperty } from "../../lib/lib";
 
 import TemplateContext from "../templateContext";
 
-export default ({ availableValues, propertyPath, label, ...props }) => {
+const CustomSelect = ({ availableValues, propertyPath, label, ...props }) => {
   const [state, setState] = useContext(TemplateContext);
   return (
     <>
@@ -25,3 +25,5 @@ export default ({ availableValues, propertyPath, label, ...props }) => {
     </>
   );
 };
+
+export default CustomSelect;

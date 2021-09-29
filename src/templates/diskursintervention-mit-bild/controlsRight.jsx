@@ -6,7 +6,7 @@ import TextScale from "../../components/inputs/textScale";
 import Textarea from "../../components/inputs/textarea";
 import { textPositions } from "../../config/vars";
 
-export default () => {
+const ControlsRight = () => {
   const currentSlide = 0;
   return (
     <>
@@ -38,3 +38,5 @@ export default () => {
     </>
   );
 };
+
+export default ControlsRight;

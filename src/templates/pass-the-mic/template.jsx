@@ -4,7 +4,7 @@ import Template0 from "./slide-0/template";
 import Template1 from "./slide-1/template";
 import TemplateContext from "../../components/templateContext";
 
-export default () => {
+const Template = () => {
   const [state] = useContext(TemplateContext);
   switch (state.currentSlide) {
     case 0:
@@ -15,3 +15,5 @@ export default () => {
       return <Template0 />;
   }
 };
+
+export default Template;

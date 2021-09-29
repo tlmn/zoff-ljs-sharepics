@@ -6,7 +6,7 @@ import Template from "../../../templates/veranstaltung/template";
 import TemplateContext from "../../../components/templateContext";
 import TemplateLayout from "../../../components/templateLayout";
 
-export default () => {
+const PageVeranstaltung = () => {
   const [state, setState] = useState({
     currentSlide: 0,
     slides: [
@@ -45,3 +45,5 @@ export default () => {
     </TemplateContext.Provider>
   );
 };
+
+export default PageVeranstaltung;

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({
+const LogoText = ({
   width = 167,
   height = 115,
   fillColor = "#252525",
@@ -15,3 +15,5 @@ export default ({
     />
   </svg>
 );
+
+export default LogoText;

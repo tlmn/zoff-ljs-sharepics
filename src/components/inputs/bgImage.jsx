@@ -4,7 +4,7 @@ import IconReset from "../../assets/svg/reset";
 import TemplateContext from "../templateContext";
 import { updateProperty } from "../../lib/lib";
 
-export default ({ currentSlide }) => {
+const BGImage = ({ currentSlide }) => {
   const [state, setState] = useContext(TemplateContext);
   const inputFileRef = useRef(null);
   return (
@@ -67,3 +67,5 @@ export default ({ currentSlide }) => {
     </>
   );
 };
+
+export default BGImage;

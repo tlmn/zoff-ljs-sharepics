@@ -9,7 +9,7 @@ import Template2 from "../../../templates/politische-bildung/slide-2/template";
 import TemplateContext from "../../../components/templateContext";
 import TemplateLayout from "../../../components/templateLayout";
 
-export default () => {
+const PagePolitischeBildung = () => {
   const [state, setState] = useState({
     currentSlide: 0,
     slides: [
@@ -101,3 +101,5 @@ export default () => {
     </TemplateContext.Provider>
   );
 };
+
+export default PagePolitischeBildung;

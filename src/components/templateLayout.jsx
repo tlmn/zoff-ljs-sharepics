@@ -2,7 +2,7 @@ import Layout from "../components/layout";
 import { Link } from "gatsby";
 import React from "react";
 
-export default ({ children }) => (
+const TemplateLayout = ({ children }) => (
   <Layout>
     <div className="container grid-12">
       <div className="col-span-12 py-1">
@@ -17,3 +17,5 @@ export default ({ children }) => (
     </div>
   </Layout>
 );
+
+export default TemplateLayout;

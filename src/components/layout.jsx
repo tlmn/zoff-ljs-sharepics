@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import { Helmet } from "react-helmet";
 import React from "react";
 
-export default ({ children, state }) => {
+const Layout = ({ children }) => {
   const {
     site: {
       siteMetadata: { title, name, description },
@@ -37,3 +37,5 @@ export default ({ children, state }) => {
     </>
   );
 };
+
+export default Layout;

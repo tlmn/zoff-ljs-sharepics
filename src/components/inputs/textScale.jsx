@@ -3,14 +3,11 @@ import { getProperty, updateProperty } from "../../lib/lib";
 
 import TemplateContext from "../templateContext";
 
-export default ({ propertyPath, label = "Textgröße" }) => {
+const TextScale = ({ propertyPath, label = "Textgröße" }) => {
   const [state, setState] = useContext(TemplateContext);
   return (
-    <>
-      <label
-        htmlFor={propertyPath}
-        dangerouslySetInnerHTML={{ __html: label }}
-      />
+    <label htmlFor={propertyPath}>
+      <span dangerouslySetInnerHTML={{ __html: label }} />
       <input
         type="range"
         id={propertyPath}
@@ -26,6 +23,8 @@ export default ({ propertyPath, label = "Textgröße" }) => {
           )
         }
       />
-    </>
+    </label>
   );
 };
+
+export default TextScale;

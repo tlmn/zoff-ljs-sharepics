@@ -3,7 +3,7 @@ import Input from "../../../components/inputs/input";
 import React from "react";
 import TextScale from "../../../components/inputs/textScale";
 
-export default () => {
+const ControlsRight = () => {
   const currentSlide = 0;
   return (
     <>
@@ -20,3 +20,5 @@ export default () => {
     </>
   );
 };
+
+export default ControlsRight;

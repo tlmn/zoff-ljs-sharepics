@@ -3,7 +3,7 @@ import React from "react";
 import TextScale from "../../../components/inputs/textScale";
 import Textarea from "../../../components/inputs/textarea";
 
-export default () => {
+const ControlsRight = () => {
   const currentSlide = 2;
   return (
     <>
@@ -29,3 +29,5 @@ export default () => {
     </>
   );
 };
+
+export default ControlsRight;

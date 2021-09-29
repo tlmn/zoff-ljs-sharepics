@@ -3,7 +3,7 @@ import { getProperty, html2image } from "../../lib/lib";
 
 import TemplateContext from "../templateContext";
 
-export default ({ fileNamePath, buttonText = "Download" }) => {
+const DownloadButton = ({ fileNamePath, buttonText = "Download" }) => {
   const [state, setState] = useContext(TemplateContext);
   return (
     <button
@@ -22,3 +22,5 @@ export default ({ fileNamePath, buttonText = "Download" }) => {
     </button>
   );
 };
+
+export default DownloadButton;

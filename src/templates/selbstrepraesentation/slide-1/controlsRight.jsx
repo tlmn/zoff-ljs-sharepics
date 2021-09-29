@@ -2,7 +2,7 @@ import BgImage from "../../../components/inputs/bgImage";
 import DownloadButton from "../../../components/inputs/downloadButton";
 import React from "react";
 
-export default () => {
+const ControlsRight = () => {
   const currentSlide = 1;
   return (
     <>
@@ -14,3 +14,5 @@ export default () => {
     </>
   );
 };
+
+export default ControlsRight;

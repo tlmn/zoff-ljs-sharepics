@@ -8,7 +8,7 @@ import Template1 from "../../../templates/pass-the-mic/slide-1/template";
 import TemplateContext from "../../../components/templateContext";
 import TemplateLayout from "../../../components/templateLayout";
 
-export default () => {
+const PagePassTheMic = () => {
   const [state, setState] = useState({
     currentSlide: 0,
     slides: [
@@ -79,3 +79,5 @@ export default () => {
     </TemplateContext.Provider>
   );
 };
+
+export default PagePassTheMic;

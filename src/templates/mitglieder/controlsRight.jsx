@@ -5,7 +5,7 @@ import Controls1 from "./slide-1/controlsRight";
 import Controls2 from "./slide-2/controlsRight";
 import TemplateContext from "../../components/templateContext";
 
-export default () => {
+const ControlsRight = () => {
   const [state] = useContext(TemplateContext);
   switch (state.currentSlide) {
     case 0:
@@ -18,3 +18,5 @@ export default () => {
       return <Controls0 />;
   }
 };
+
+export default ControlsRight;

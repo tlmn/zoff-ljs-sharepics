@@ -4,7 +4,7 @@ import { formatEmojis, getColor } from "../../../lib/lib";
 import LogoText from "../../../assets/svg/logo-text";
 import TemplateContext from "../../../components/templateContext";
 
-export default ({ thumbnail = false }) => {
+const Template = ({ thumbnail = false }) => {
   const [state] = useContext(TemplateContext);
   return (
     <div className={`${!thumbnail ? `col-span-6` : ``} relative`}>
@@ -54,3 +54,5 @@ export default ({ thumbnail = false }) => {
     </div>
   );
 };
+
+export default Template;

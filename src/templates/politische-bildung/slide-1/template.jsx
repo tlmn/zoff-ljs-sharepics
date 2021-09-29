@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import TemplateContext from "../../../components/templateContext";
 import { getPrimaryColor } from "../../../lib/lib";
 
-export default ({ thumbnail = false }) => {
+const Template = ({ thumbnail = false }) => {
   const currentSlide = 1;
   const [state] = useContext(TemplateContext);
   return (
@@ -32,3 +32,5 @@ export default ({ thumbnail = false }) => {
     </div>
   );
 };
+
+export default Template;

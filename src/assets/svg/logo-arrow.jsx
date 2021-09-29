@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({
+const LogoArrow = ({
   width = 123,
   height = 129,
   fillColor = "#252525",
@@ -13,3 +13,5 @@ export default ({
     />
   </svg>
 );
+
+export default LogoArrow;
