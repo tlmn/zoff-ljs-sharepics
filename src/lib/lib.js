@@ -14,7 +14,7 @@ export const html2image = async ({ state, setState }, fileName = "solid") => {
     height: 1080,
   }).then(function (blob) {
     saveAs(blob, `sharepic-${slugify(fileName.substring)}`);
-    setState({ ...state, templateScale: true });
+    setState((prev) => ({ ...prev, templateScale: true }));
   });
 };
 

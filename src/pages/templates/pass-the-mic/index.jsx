@@ -45,7 +45,9 @@ const PagePassTheMic = () => {
               case 0:
                 return (
                   <button
-                    onClick={() => setState({ ...state, currentSlide: i })}
+                    onClick={() =>
+                      setState((prev) => ({ ...prev, currentSlide: i }))
+                    }
                     className="is-thumbnail hover:opacity-75"
                   >
                     <Template0 thumbnail={true} />
@@ -54,7 +56,9 @@ const PagePassTheMic = () => {
               case 1:
                 return (
                   <button
-                    onClick={() => setState({ ...state, currentSlide: i })}
+                    onClick={() =>
+                      setState((prev) => ({ ...prev, currentSlide: i }))
+                    }
                     className="is-thumbnail hover:opacity-75"
                   >
                     <Template1 thumbnail={true} />

@@ -29,7 +29,7 @@ const ColorThemesSelect = () => {
                   .name
               }
               onChange={(e) =>
-                setState({ ...state, colorTheme: e.target.value })
+                setState((prev) => ({ ...prev, colorTheme: e.target.value }))
               }
             />
             <label
@@ -79,7 +79,7 @@ const ColorThemesSelect = () => {
                   .name
               }
               onChange={(e) =>
-                setState({ ...state, colorTheme: e.target.value })
+                setState((prev) => ({ ...prev, colorTheme: e.target.value }))
               }
             />
             <label
