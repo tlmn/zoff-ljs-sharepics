@@ -2,22 +2,20 @@ import { cloneDeepWith, get, set } from "lodash";
 import { colorThemes, colors } from "../config/vars";
 
 import emojiRegex from "emoji-regex";
-import htmlToImage from "html-to-image";
+import { toJpeg } from "html-to-image";
 import { saveAs } from "file-saver";
 import slugify from "react-slugify";
 
 export const html2image = async ({ state, setState }, fileName = "solid") => {
   setState({ ...state, templateScale: false });
-  htmlToImage
-    .toJpeg(state.slides[state.currentSlide].ref.current, {
-      quality: 1,
-      width: 1080,
-      height: 1080,
-    })
-    .then(function (blob) {
-      saveAs(blob, `sharepic-${slugify(fileName.substring)}`);
-      setState({ ...state, templateScale: true });
-    });
+  toJpeg(state.slides[state.currentSlide].ref.current, {
+    quality: 1,
+    width: 1080,
+    height: 1080,
+  }).then(function (blob) {
+    saveAs(blob, `sharepic-${slugify(fileName.substring)}`);
+    setState({ ...state, templateScale: true });
+  });
 };
 
 export const formatEmojis = (text = "") => {
