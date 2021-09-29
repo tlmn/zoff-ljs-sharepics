@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import { getProperty, html2image } from "../../lib/lib";
 
-import TemplateContext from "../templateContext";
+import useDataContext from "../../lib/useDataContext";
 
 const DownloadButton = ({ fileNamePath, buttonText = "Download" }) => {
-  const [state, setState] = useContext(TemplateContext);
+  const { state, setState } = useDataContext();
   return (
     <button
       className="btn btn-download"

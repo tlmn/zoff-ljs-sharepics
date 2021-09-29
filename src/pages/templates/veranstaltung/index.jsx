@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import ControlsLeft from "../../../templates/veranstaltung/controlsLeft";
 import ControlsRight from "../../../templates/veranstaltung/controlsRight";
 import Template from "../../../templates/veranstaltung/template";
-import TemplateContext from "../../../components/templateContext";
+import { Provider as DataContextProvider } from "../../../lib/useDataContext";
 import TemplateLayout from "../../../components/templateLayout";
 
 const PageVeranstaltung = () => {
@@ -30,7 +30,7 @@ const PageVeranstaltung = () => {
   });
 
   return (
-    <TemplateContext.Provider value={[state, setState]}>
+    <DataContextProvider value={{ state, setState }}>
       <TemplateLayout>
         <div className="col-span-3">
           <ControlsLeft />
@@ -42,7 +42,7 @@ const PageVeranstaltung = () => {
           <ControlsRight />
         </div>
       </TemplateLayout>
-    </TemplateContext.Provider>
+    </DataContextProvider>
   );
 };
 

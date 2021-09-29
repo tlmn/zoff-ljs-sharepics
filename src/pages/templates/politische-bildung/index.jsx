@@ -6,7 +6,7 @@ import Template from "../../../templates/politische-bildung/template";
 import Template0 from "../../../templates/politische-bildung/slide-0/template";
 import Template1 from "../../../templates/politische-bildung/slide-1/template";
 import Template2 from "../../../templates/politische-bildung/slide-2/template";
-import TemplateContext from "../../../components/templateContext";
+import { Provider as DataContextProvider } from "../../../lib/useDataContext";
 import TemplateLayout from "../../../components/templateLayout";
 
 const PagePolitischeBildung = () => {
@@ -50,7 +50,7 @@ const PagePolitischeBildung = () => {
   });
 
   return (
-    <TemplateContext.Provider value={[state, setState]}>
+    <DataContextProvider value={{ state, setState }}>
       <TemplateLayout>
         <div className="col-span-12 flex justify-center py-2">
           {state.slides.map((slide, i) => {
@@ -104,7 +104,7 @@ const PagePolitischeBildung = () => {
           <ControlsRight />
         </div>
       </TemplateLayout>
-    </TemplateContext.Provider>
+    </DataContextProvider>
   );
 };
 

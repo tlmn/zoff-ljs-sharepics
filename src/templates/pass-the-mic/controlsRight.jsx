@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import ControlsRight0 from "./slide-0/controlsRight";
 import ControlsRight1 from "./slide-1/controlsRight";
-import TemplateContext from "../../components/templateContext";
+import useDataContext from "../../lib/useDataContext";
 
 const ControlsRight = () => {
-  const [state] = useContext(TemplateContext);
+  const { state } = useDataContext();
   switch (state.currentSlide) {
     case 0:
       return <ControlsRight0 />;

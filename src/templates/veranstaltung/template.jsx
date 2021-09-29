@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import { formatEmojis, getColor } from "../../lib/lib";
 
 import BreakerLine from "../../assets/svg/breakerline";
 import LogoArrow from "../../assets/svg/logo-arrow";
-import TemplateContext from "../../components/templateContext";
+import useDataContext from "../../lib/useDataContext";
 
 const Template = () => {
-  const [state] = useContext(TemplateContext);
+  const { state } = useDataContext();
   return (
     <div className="col-span-6 relative">
       <div

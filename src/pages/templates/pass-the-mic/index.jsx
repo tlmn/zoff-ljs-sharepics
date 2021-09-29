@@ -5,7 +5,7 @@ import ControlsRight from "../../../templates/pass-the-mic/controlsRight";
 import Template from "../../../templates/pass-the-mic/template";
 import Template0 from "../../../templates/pass-the-mic/slide-0/template";
 import Template1 from "../../../templates/pass-the-mic/slide-1/template";
-import TemplateContext from "../../../components/templateContext";
+import { Provider as DataContextProvider } from "../../../lib/useDataContext";
 import TemplateLayout from "../../../components/templateLayout";
 
 const PagePassTheMic = () => {
@@ -37,7 +37,7 @@ const PagePassTheMic = () => {
   });
 
   return (
-    <TemplateContext.Provider value={[state, setState]}>
+    <DataContextProvider value={{ state, setState }}>
       <TemplateLayout>
         <div className="col-span-12 flex justify-center py-2">
           {state.slides.map((slide, i) => {
@@ -80,7 +80,7 @@ const PagePassTheMic = () => {
           <ControlsRight />
         </div>
       </TemplateLayout>
-    </TemplateContext.Provider>
+    </DataContextProvider>
   );
 };
 

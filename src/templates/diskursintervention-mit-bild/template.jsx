@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import { formatEmojis, getColor } from "../../lib/lib";
 
 import DraggableBg from "../../components/inputs/draggableBg";
 import LogoArrow from "../../assets/svg/logo-arrow";
-import TemplateContext from "../../components/templateContext";
+import useDataContext from "../../lib/useDataContext";
 
 const Template = () => {
-  const [state] = useContext(TemplateContext);
+  const { state } = useDataContext();
   return (
     <div className="col-span-6 relative">
       <div
@@ -16,9 +16,7 @@ const Template = () => {
         style={{ backgroundColor: getColor(state, 0) }}
         ref={state.slides[state.currentSlide].ref}
       >
-        <DraggableBg
-          propertyPath="slides[0].data.image.position"
-        />
+        <DraggableBg propertyPath="slides[0].data.image.position" />
 
         <div
           className="absolute top-0 left-0 right-0 z-20 w-full h-full"

@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import { getProperty, updateProperty } from "../../lib/lib";
 
-import TemplateContext from "../templateContext";
+import useDataContext from "../../lib/useDataContext";
 
 const Textarea = ({ propertyPath, label, ...props }) => {
-  const [state, setState] = useContext(TemplateContext);
+  const { state, setState } = useDataContext();
   return (
     <>
       <label htmlFor={propertyPath}>{label}</label>
@@ -14,9 +14,8 @@ const Textarea = ({ propertyPath, label, ...props }) => {
         }
         id={propertyPath}
         {...props}
-      >
-        {getProperty({ state }, propertyPath)}
-      </textarea>
+        value={getProperty({ state }, propertyPath)}
+      />
     </>
   );
 };

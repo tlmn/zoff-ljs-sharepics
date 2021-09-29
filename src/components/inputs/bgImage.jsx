@@ -1,11 +1,11 @@
-import React, { useContext, useRef } from "react";
+import React, {  useRef } from "react";
 
 import IconReset from "../../assets/svg/reset";
-import TemplateContext from "../templateContext";
 import { updateProperty } from "../../lib/lib";
+import useDataContext from "../../lib/useDataContext";
 
 const BGImage = ({ currentSlide }) => {
-  const [state, setState] = useContext(TemplateContext);
+  const { state, setState } = useDataContext();
   const inputFileRef = useRef(null);
   return (
     <>

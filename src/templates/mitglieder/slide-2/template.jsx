@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import LogoText from "../../../assets/svg/logo-text";
-import TemplateContext from "../../../components/templateContext";
+import useDataContext from "../../../lib/useDataContext";
 import { getColor } from "../../../lib/lib";
 
 const Template = ({ thumbnail = false }) => {
-  const [state] = useContext(TemplateContext);
+  const { state } = useDataContext();
   return (
     <div className={`${!thumbnail ? `col-span-6` : ``} relative`}>
       <div

@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import Template0 from "./slide-0/template";
 import Template1 from "./slide-1/template";
-import TemplateContext from "../../components/templateContext";
+import useDataContext from "../../lib/useDataContext";
 
 const Template = () => {
-  const [state] = useContext(TemplateContext);
+  const { state } = useDataContext();
   switch (state.currentSlide) {
     case 0:
       return <Template0 />;

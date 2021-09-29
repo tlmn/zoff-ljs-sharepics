@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 /* eslint-disable jsx-a11y/no-onchange */
 import { getProperty, updateProperty } from "../../lib/lib";
 
-import TemplateContext from "../templateContext";
+import useDataContext from "../../lib/useDataContext";
 
 const CustomSelect = ({ availableValues, propertyPath, label, ...props }) => {
-  const [state, setState] = useContext(TemplateContext);
+  const { state, setState } = useDataContext();
   return (
     <>
       <label htmlFor={propertyPath}>{label}</label>

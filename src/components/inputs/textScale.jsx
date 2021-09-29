@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import { getProperty, updateProperty } from "../../lib/lib";
 
-import TemplateContext from "../templateContext";
+import useDataContext from "../../lib/useDataContext";
 
 const TextScale = ({ propertyPath, label = "Textgröße" }) => {
-  const [state, setState] = useContext(TemplateContext);
+  const { state, setState } = useDataContext();
   return (
     <label htmlFor={propertyPath}>
       <span dangerouslySetInnerHTML={{ __html: label }} />

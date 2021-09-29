@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import ControlsLeft from "../../../templates/zitat/controlsLeft";
 import ControlsRight from "../../../templates/zitat/controlsRight";
 import Template from "../../../templates/zitat/template";
-import TemplateContext from "../../../components/templateContext";
+import { Provider as DataContextProvider } from "../../../lib/useDataContext";
 import TemplateLayout from "../../../components/templateLayout";
 
 const PageZitat = () => {
@@ -27,7 +27,7 @@ const PageZitat = () => {
   });
 
   return (
-    <TemplateContext.Provider value={[state, setState]}>
+    <DataContextProvider value={{ state, setState }}>
       <TemplateLayout>
         <div className="col-span-3">
           <ControlsLeft />
@@ -39,7 +39,7 @@ const PageZitat = () => {
           <ControlsRight />
         </div>
       </TemplateLayout>
-    </TemplateContext.Provider>
+    </DataContextProvider>
   );
 };
 

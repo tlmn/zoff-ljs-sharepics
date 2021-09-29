@@ -6,7 +6,7 @@ import Template from "../../../templates/selbstrepraesentation/template";
 import Template0 from "../../../templates/selbstrepraesentation/slide-0/template";
 import Template1 from "../../../templates/selbstrepraesentation/slide-1/template";
 import Template2 from "../../../templates/selbstrepraesentation/slide-2/template";
-import TemplateContext from "../../../components/templateContext";
+import { Provider as DataContextProvider } from "../../../lib/useDataContext";
 import TemplateLayout from "../../../components/templateLayout";
 
 const PageSelbstrepraesentation = () => {
@@ -43,7 +43,7 @@ const PageSelbstrepraesentation = () => {
   });
 
   return (
-    <TemplateContext.Provider value={[state, setState]}>
+    <DataContextProvider value={{ state, setState }}>
       <TemplateLayout>
         <div className="col-span-12 flex justify-center py-2">
           {state.slides.map((slide, i) => {
@@ -96,7 +96,7 @@ const PageSelbstrepraesentation = () => {
           <ControlsRight />
         </div>
       </TemplateLayout>
-    </TemplateContext.Provider>
+    </DataContextProvider>
   );
 };
 

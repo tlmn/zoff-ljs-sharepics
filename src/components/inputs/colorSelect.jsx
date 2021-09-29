@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 
-import TemplateContext from "../templateContext";
+import useDataContext from "../../lib/useDataContext";
 import { primaryColors } from "../../config/vars";
 
 const ColorSelect = () => {
-  const [state, setState] = useContext(TemplateContext);
+  const { state, setState } = useDataContext();
 
   return (
     <>

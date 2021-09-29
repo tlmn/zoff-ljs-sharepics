@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import ControlsLeft from "../../../templates/diskursintervention/controlsLeft";
 import ControlsRight from "../../../templates/diskursintervention/controlsRight";
 import Template from "../../../templates/diskursintervention/template";
-import TemplateContext from "../../../components/templateContext";
+import { Provider as DataContextProvider } from "../../../lib/useDataContext";
 import TemplateLayout from "../../../components/templateLayout";
 
 const PageDiskursintervention = () => {
@@ -27,7 +27,7 @@ const PageDiskursintervention = () => {
   });
 
   return (
-    <TemplateContext.Provider value={[state, setState]}>
+    <DataContextProvider value={{ state, setState }}>
       <TemplateLayout>
         <div className="col-span-3">
           <ControlsLeft />
@@ -39,7 +39,7 @@ const PageDiskursintervention = () => {
           <ControlsRight />
         </div>
       </TemplateLayout>
-    </TemplateContext.Provider>
+    </DataContextProvider>
   );
 };
 

@@ -1,14 +1,14 @@
-import React, { useContext } from "react";
+import React from "react";
 import {
   colorThemes,
   corporateThemes,
   secondaryThemes,
 } from "../../config/vars";
 
-import TemplateContext from "../templateContext";
+import useDataContext from "../../lib/useDataContext";
 
 const ColorThemesSelect = () => {
-  const [state, setState] = useContext(TemplateContext);
+  const { state, setState } = useDataContext();
   return (
     <>
       <div className="uppercase font-headline italic text-white">
