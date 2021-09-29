@@ -7,7 +7,7 @@ import { saveAs } from "file-saver";
 import slugify from "react-slugify";
 
 export const html2image = async ({ state, setState }, fileName = "solid") => {
-  setState({ ...state, templateScale: false });
+  setState((prev) => ({ ...prev, templateScale: false }));
   toJpeg(state.slides[state.currentSlide].ref.current, {
     quality: 1,
     width: 1080,
