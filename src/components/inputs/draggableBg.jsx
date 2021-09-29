@@ -5,7 +5,7 @@ import TemplateContext from "../templateContext";
 import { updateProperty } from "../../lib/lib";
 
 const DraggableBG = ({ propertyPath }) => {
-  const [state, setState] = useContext(TemplateContext);
+  const [setState] = useContext(TemplateContext);
   const refDraggable = useRef(null);
   return (
     <>
