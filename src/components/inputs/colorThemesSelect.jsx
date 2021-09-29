@@ -28,9 +28,10 @@ const ColorThemesSelect = () => {
                 colorThemes.filter((theme) => theme.label === colorTheme)[0]
                   .name
               }
-              onChange={(e) =>
-                setState((prev) => ({ ...prev, colorTheme: e.target.value }))
-              }
+              onChange={(e) => {
+                let value = e.target.value;
+                setState((prev) => ({ ...prev, colorTheme: value }));
+              }}
             />
             <label
               htmlFor={
@@ -78,10 +79,12 @@ const ColorThemesSelect = () => {
                 colorThemes.filter((theme) => theme.label === colorTheme)[0]
                   .name
               }
-              onChange={(e) =>
-                setState((prev) => ({ ...prev, colorTheme: e.target.value }))
-              }
+              onChange={(e) => {
+                let value = e.target.value;
+                setState((prev) => ({ ...prev, colorTheme: value }));
+              }}
             />
+
             <label
               htmlFor={
                 colorThemes.filter((theme) => theme.label === colorTheme)[0]

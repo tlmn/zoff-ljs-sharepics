@@ -19,9 +19,10 @@ const ColorSelect = () => {
               value={primaryColor.label}
               name="primaryColor"
               id={primaryColor.name}
-              onChange={(e) =>
-                setState({ ...state, primaryColor: e.target.value })
-              }
+              onChange={(e) => {
+                let value = e.target.value;
+                setState({ ...state, primaryColor: value });
+              }}
             />
             <label htmlFor={primaryColor.name} className="label__radio">
               <div className="px-2">
