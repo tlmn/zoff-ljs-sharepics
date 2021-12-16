@@ -21,10 +21,10 @@ const Template = () => {
 
   const { scaleFactor } = state;
   return (
-    <div className="col-span-6 relative" ref={ref}>
+    <div className="relative" ref={ref}>
       <div
         className={`p-4 // flex flex-col absolute // border-1 // template ${
-          state.templateScale ? `template-scale` : `relative`
+          state.templateScale ? `` : `relative`
         }`}
         style={{
           backgroundColor: getColor(state, 0),
