@@ -26,9 +26,15 @@ input[type="radio"] {
 label {
   @apply italic;
   @apply font-bold;
-  @apply text-white;
+  @apply text-black;
   @apply uppercase;
   @apply font-headline;
+}
+
+@screen md {
+  label {
+    @apply text-white;
+  }
 }
 
 .btn {
