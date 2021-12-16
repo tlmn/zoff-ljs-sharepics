@@ -54,10 +54,6 @@ label {
   @apply duration-200;
 }
 
-.btn-download {
-  @apply w-full;
-}
-
 .btn:hover {
   @apply bg-turquoise-lighter;
 }
