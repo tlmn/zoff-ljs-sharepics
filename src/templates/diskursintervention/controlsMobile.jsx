@@ -12,34 +12,35 @@ const ControlsMobile = () => {
   const currentSlide = 0;
   return (
     <div className="block md:hidden fixed bottom-0 w-full left-0 z-20">
-      <FieldSet name={`colorTheme`}>
-        <ColorThemesSelect />
-      </FieldSet>
-      <FieldSet name={`slides[${currentSlide}].data.category`}>
-        <Input
-          label="Titel"
-          propertyPath={`slides[${currentSlide}].data.category.content`}
-        />
-      </FieldSet>
+      <div className="flex w-full justify-center">
+        <FieldSet name={`colorTheme`}>
+          <ColorThemesSelect />
+        </FieldSet>
+        <FieldSet name={`slides[${currentSlide}].data.category`}>
+          <Input
+            label="Titel"
+            propertyPath={`slides[${currentSlide}].data.category.content`}
+          />
+        </FieldSet>
 
-      <FieldSet name={`slides[${currentSlide}].data.body`}>
-        <Textarea
-          label="Text"
-          propertyPath={`slides[${currentSlide}].data.body.content`}
-          rows={3}
-          cols={30}
-        />
-        <TextScale propertyPath={`slides[${currentSlide}].data.body.scale`} />
-      </FieldSet>
+        <FieldSet name={`slides[${currentSlide}].data.body`}>
+          <Textarea
+            label="Text"
+            propertyPath={`slides[${currentSlide}].data.body.content`}
+            rows={3}
+            cols={30}
+          />
+          <TextScale propertyPath={`slides[${currentSlide}].data.body.scale`} />
+        </FieldSet>
 
-      <FieldSet name={`slides[${currentSlide}].data.localBranch`}>
-        <Textarea
-          label="Lokalgruppe (optional)"
-          propertyPath={`slides[${currentSlide}].data.localBranch.content`}
-          rows={3}
-        />
-      </FieldSet>
-
+        <FieldSet name={`slides[${currentSlide}].data.localBranch`}>
+          <Textarea
+            label="Lokalgruppe (optional)"
+            propertyPath={`slides[${currentSlide}].data.localBranch.content`}
+            rows={3}
+          />
+        </FieldSet>
+      </div>
       <MobileInputMenu>
         <DownloadButton className="m-1" />
         <MenuItem
