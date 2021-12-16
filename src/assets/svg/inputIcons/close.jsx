@@ -10,7 +10,7 @@ const Close = () => (
   >
     <circle cx="24" cy="24" r="24" fill="#fff"></circle>
     <path
-      fill="#252525"
+      style={{ fill: "#252525" }}
       fillRule="evenodd"
       d="M22.589 24L14 32.589l1.411 1.41L24 25.412 32.589 34 34 32.589l-8.589-8.59L34 15.412 32.589 14 24 22.589 15.411 14l-1.41 1.411L22.588 24z"
       clipRule="evenodd"
