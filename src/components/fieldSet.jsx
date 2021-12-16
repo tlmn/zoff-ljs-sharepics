@@ -20,7 +20,7 @@ const FieldSet = ({ children, legend, name }) => {
       {legend && <legend dangerouslySetInnerHTML={{ __html: legend }} />}
       {children}
       <button
-        className="absolute top-0 right-0 hover:fill-turquoise"
+        className="absolute top-0 right-0 hover:fill-green"
         style={{ transform: "translateX(10%) translateY(-10%)" }}
         onClick={() => setState((prev) => ({ ...prev, activeFieldset: "" }))}
       >

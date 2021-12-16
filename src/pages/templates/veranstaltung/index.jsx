@@ -25,7 +25,7 @@ const PageVeranstaltung = () => {
         ref: useRef(null),
       },
     ],
-    colorTheme: "darkGray_turquoise",
+    colorTheme: "darkGray_green",
     templateScale: true,
   });
 

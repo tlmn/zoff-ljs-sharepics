@@ -21,7 +21,7 @@ const Input = ({ propertyPath, label, ...props }) => {
           {...props}
         />
         <button
-          className="absolute top-0 bottom-0 my-auto right-1 fill-lightGray hover:fill-turquoise"
+          className="absolute top-0 bottom-0 my-auto right-1 fill-lightGray hover:fill-green"
           onClick={() => updateProperty({ setState }, propertyPath, "")}
         >
           <EraseIcon />

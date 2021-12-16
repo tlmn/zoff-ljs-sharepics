@@ -24,7 +24,7 @@ module.exports = {
       },
       lightGray: "#DEDEDE",
       red: "#E2190C",
-      turquoise: { DEFAULT: "#00FFC2", lighter: darken("#00FFC2", 0.15) },
+      green: { DEFAULT: "#00FFC2", lighter: darken("#00FFC2", 0.15) },
       violet: "#C9CEFF",
       white: "#fff",
       black: "#000",

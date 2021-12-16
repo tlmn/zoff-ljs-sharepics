@@ -9,7 +9,7 @@ const PageIndex = () => (
       <div className="container py-2">
         <div className="mx-auto grid grid-cols-12 gap-x-4 gap-y-2 py-5">
           <div className="col-span-12 text-center">
-            <h1 className="text-xl text-turquoise uppercase leading-tight italic">
+            <h1 className="text-xl text-green uppercase leading-tight italic">
               Sharepic Generator <br /> linksjugend ['solid]
             </h1>
           </div>

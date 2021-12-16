@@ -19,7 +19,7 @@ const Textarea = ({ propertyPath, label, ...props }) => {
           value={getProperty({ state }, propertyPath)}
         />
         <button
-          className="absolute bottom-1 right-1 fill-lightGray hover:fill-turquoise"
+          className="absolute bottom-1 right-1 fill-lightGray hover:fill-green"
           onClick={() => updateProperty({ setState }, propertyPath, "")}
         >
           <EraseIcon />

@@ -41,7 +41,7 @@ label {
 }
 
 .btn {
-  @apply bg-turquoise;
+  @apply bg-green;
   @apply uppercase;
   @apply text-darkGray;
   @apply font-headline;
@@ -55,7 +55,7 @@ label {
 }
 
 .btn:hover {
-  @apply bg-turquoise-lighter;
+  @apply bg-green-lighter;
 }
 
 h2.controls {

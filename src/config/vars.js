@@ -1,7 +1,7 @@
 export const colors = [
   { name: "darkGray", value: "#252525" },
   { name: "red", value: "#E2190C" },
-  { name: "turquoise", value: "#00FFC2" },
+  { name: "green", value: "#00FFC2" },
   { name: "violet", value: "#C9CEFF" },
   { name: "white", value: "#fff" },
 ];
@@ -13,8 +13,8 @@ export const textPositions = [
 ];
 
 export const corporateThemes = [
-  "darkGray_turquoise",
-  "turquoise_darkGray",
+  "darkGray_green",
+  "green_darkGray",
   "violet_red",
   "red_violet",
 ];
@@ -28,14 +28,14 @@ export const secondaryThemes = [
 
 export const colorThemes = [
   {
-    label: "darkGray_turquoise",
+    label: "darkGray_green",
     name: "dunkelgrau & türkis",
-    colors: ["darkGray", "turquoise"],
+    colors: ["darkGray", "green"],
   },
   {
-    label: "turquoise_darkGray",
+    label: "green_darkGray",
     name: "türkis & dunkelgrau",
-    colors: ["turquoise", "darkGray"],
+    colors: ["green", "darkGray"],
   },
   {
     label: "violet_red",
@@ -70,7 +70,7 @@ export const colorThemes = [
 ];
 
 export const primaryColors = [
-  { label: "turquoise", name: "türkis" },
+  { label: "green", name: "türkis" },
   { label: "violet", name: "violet" },
   { label: "red", name: "rot" },
 ];

@@ -24,7 +24,7 @@ const PageDiskursintervention = () => {
         ref: useRef(null),
       },
     ],
-    colorTheme: "turquoise_darkGray",
+    colorTheme: "green_darkGray",
     templateScale: true,
     scaleFactor: 1,
   });

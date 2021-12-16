@@ -22,7 +22,7 @@ const TemplateLayout = ({ children }) => {
         <div className="col-span-12 py-1">
           <Link
             to="/"
-            className="hover:text-turquoise hover:fill-turquoise uppercase text-white font-headline italic flex items-center gap-1 m-1"
+            className="hover:text-green hover:fill-green uppercase text-white font-headline italic flex items-center gap-1 m-1"
           >
             <ToMenuIcon /> zurück zur Übersicht
           </Link>

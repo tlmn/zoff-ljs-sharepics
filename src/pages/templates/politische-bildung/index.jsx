@@ -45,7 +45,7 @@ const PagePolitischeBildung = () => {
         ref: useRef(null),
       },
     ],
-    primaryColor: "turquoise",
+    primaryColor: "green",
     templateScale: true,
   });
 

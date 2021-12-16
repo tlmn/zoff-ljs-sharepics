@@ -41,8 +41,8 @@ const MenuItem = ({ iconType, legend, targetFieldset }) => {
   return (
     <button
       className={clsx(
-        "flex flex-col items-center text-white transition-all ease-in-out duration-200 hover:text-turquoise hover:fill-turquoise cursor-pointer",
-        activeFieldset === targetFieldset ? "fill-turquoise" : "fill-white"
+        "flex flex-col items-center text-white transition-all ease-in-out duration-200 hover:text-green hover:fill-green cursor-pointer",
+        activeFieldset === targetFieldset ? "fill-green" : "fill-white"
       )}
       onClick={() =>
         setState((prev) => ({

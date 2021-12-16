@@ -38,7 +38,7 @@ const PageSelbstrepraesentation = () => {
         ref: useRef(null),
       },
     ],
-    colorTheme: "darkGray_turquoise",
+    colorTheme: "darkGray_green",
     templateScale: true,
   });
 
