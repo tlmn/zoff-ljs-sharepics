@@ -3,16 +3,34 @@ import { formatEmojis, getColor } from "../../lib/lib";
 
 import LogoText from "../../assets/svg/logo-text";
 import useDataContext from "../../lib/useDataContext";
+import useWindowResize from "../../lib/useWindowResize";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 const Template = () => {
-  const { state } = useDataContext();
+  const { state, setState } = useDataContext();
+  const ref = useRef(null);
+  const { width } = useWindowResize();
+
+  useEffect(() => {
+    setState((prev) => ({
+      ...prev,
+      scaleFactor: ref?.current?.clientWidth / 1080,
+    }));
+  }, [ref, width]);
+
+  const { scaleFactor } = state;
   return (
-    <div className="col-span-6 relative">
+    <div className="col-span-6 relative" ref={ref}>
       <div
         className={`p-4 // flex flex-col absolute // border-1 // template ${
           state.templateScale ? `template-scale` : `relative`
         }`}
-        style={{ backgroundColor: getColor(state, 0) }}
+        style={{
+          backgroundColor: getColor(state, 0),
+          transformOrigin: "0 0",
+          transform: state.templateScale ? `scale(${scaleFactor})` : ``,
+        }}
         ref={state.slides[state.currentSlide].ref}
       >
         <span
