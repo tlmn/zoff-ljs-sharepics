@@ -11,7 +11,7 @@ const ColorThemesSelect = () => {
   const { state, setState } = useDataContext();
   return (
     <>
-      <div className="uppercase font-headline italic text-white">
+      <div className="uppercase font-headline italic text-black md:text-white">
         Corporate Design
       </div>
       <div className="grid-cols-2 grid">
@@ -62,7 +62,7 @@ const ColorThemesSelect = () => {
           </div>
         ))}
       </div>
-      <div className="uppercase font-headline italic text-white">
+      <div className="uppercase font-headline italic text-black md:text-white">
         Geht auch...
       </div>
       <div className="grid-cols-4 grid">
