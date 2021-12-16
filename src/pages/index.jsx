@@ -22,9 +22,10 @@ const PageIndex = () => (
               alt={name}
               className="hover:opacity-75 transition-all ease-in-out duration-200 w-full"
             />
-            <span className="block text-base text-white uppercase pb-1 break-all leading-tight mt-1">
-              {name}
-            </span>
+            <span
+              className="block text-base text-white uppercase pb-1 leading-tight mt-1"
+              dangerouslySetInnerHTML={{ __html: name }}
+            />
           </Link>
         </div>
       ))}
