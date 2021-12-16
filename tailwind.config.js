@@ -22,12 +22,13 @@ module.exports = {
         DEFAULT: "#252525",
         lighter: lighten("#252525", 0.8),
       },
-      lightGray: "#858585",
+      lightGray: "#DEDEDE",
       red: "#E2190C",
       turquoise: { DEFAULT: "#00FFC2", lighter: darken("#00FFC2", 0.15) },
       violet: "#C9CEFF",
       white: "#fff",
       black: "#000",
+      transparent: "transparent",
     },
     spacing: {
       0: "0",
@@ -42,6 +43,7 @@ module.exports = {
       normal: 1.2,
     },
     fontSize: {
+      xs: "9px",
       small: "12px",
       base: "18px",
       md: "30px",
