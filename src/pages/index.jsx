@@ -13,15 +13,15 @@ const PageIndex = () => (
               Sharepic Generator <br /> linksjugend ['solid]
             </h1>
           </div>
-          {templates.map((template) => (
+          {templates.map(({ link, name, thumbnailSrc }) => (
             <div className="col-span-12 sm:col-span-4 text-center">
-              <Link to={template.link} className="no-underline hover:underline">
+              <Link to={link} className="no-underline hover:underline">
                 <span className="block text-base text-white uppercase pb-1">
-                  {template.name}
+                  {name}
                 </span>
                 <img
-                  src={template.thumbnailSrc}
-                  alt={template.name}
+                  src={thumbnailSrc}
+                  alt={name}
                   className="hover:opacity-75 transition-all ease-in-out duration-200"
                 />
               </Link>
