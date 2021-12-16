@@ -1,19 +1,34 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { formatEmojis, getColor } from "../../lib/lib";
 
 import BreakerLine from "../../assets/svg/breakerline";
 import LogoArrow from "../../assets/svg/logo-arrow";
 import useDataContext from "../../lib/useDataContext";
+import useWindowResize from "../../lib/useWindowResize";
 
 const Template = () => {
-  const { state } = useDataContext();
+  const { state, setState } = useDataContext();
+  const ref = useRef(null);
+  const { scaleFactor } = state;
+  const { width } = useWindowResize();
+
+  useEffect(() => {
+    setState((prev) => ({
+      ...prev,
+      scaleFactor: ref?.current?.clientWidth / 1080,
+    }));
+  }, [ref, width]);
   return (
-    <div className="col-span-6 relative">
+    <div className="col-span-6 relative" ref={ref}>
       <div
         className={`flex flex-col absolute // border-1 // template ${
-          state.templateScale ? `template-scale` : `relative`
+          state.templateScale ? `` : `relative`
         }`}
-        style={{ backgroundColor: getColor(state, 0) }}
+        style={{
+          backgroundColor: getColor(state, 0),
+          transformOrigin: "0 0",
+          transform: state.templateScale ? `scale(${scaleFactor})` : ``,
+        }}
         ref={state.slides[state.currentSlide].ref}
       >
         <div className="flex flex-col h-full">
