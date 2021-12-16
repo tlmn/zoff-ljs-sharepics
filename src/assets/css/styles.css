@@ -13,11 +13,23 @@
   @apply grid;
 }
 
+.fill-turquoise > svg > path {
+  fill: theme("colors.turquoise.DEFAULT");
+  @apply transition-all ease-in-out duration-200;
+}
+
 .fill-white > svg > path {
   fill: #fff;
   @apply transition-all ease-in-out duration-200;
 }
 
-.hover\:fill-turquoise:hover > svg > path {
+.fill-lightGray > svg > path,
+.fill-lightGray > svg > circle {
+  fill: theme("colors.lightGray");
+  @apply transition-all ease-in-out duration-200;
+}
+
+.hover\:fill-turquoise:hover > svg > path,
+.hover\:fill-turquoise:hover > svg > circle {
   fill: #00ffc2;
 }
