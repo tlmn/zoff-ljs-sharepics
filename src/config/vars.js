@@ -77,22 +77,22 @@ export const primaryColors = [
 
 export const templates = [
   {
-    name: "Diskursintervention",
+    name: "Diskurs&shy;inter&shy;vention",
     link: "templates/diskursintervention",
     thumbnailSrc: "../assets/images/templates/diskursintervention.jpg",
   },
   {
-    name: "Diskursintervention mit Bild",
+    name: "Diskurs&shy;inter&shy;vention mit Bild",
     link: "templates/diskursintervention-mit-bild",
     thumbnailSrc: "../assets/images/templates/diskursintervention-mit-bild.jpg",
   },
   {
-    name: "Selbstrepräsentation",
+    name: "Selbst&shy;re&shy;präsen&shy;tation",
     link: "templates/selbstrepraesentation",
     thumbnailSrc: "../assets/images/templates/selbstrepraesentation.jpg",
   },
   {
-    name: "Mitglieder",
+    name: "Mit&shy;glieder",
     link: "templates/mitglieder",
     thumbnailSrc: "../assets/images/templates/mitglieder.jpg",
   },
@@ -107,7 +107,7 @@ export const templates = [
     thumbnailSrc: "../assets/images/templates/pass-the-mic.jpg",
   },
   {
-    name: "Veranstaltung",
+    name: "Veran&shy;staltung",
     link: "templates/veranstaltung",
     thumbnailSrc: "../assets/images/templates/veranstaltung.jpg",
   },
