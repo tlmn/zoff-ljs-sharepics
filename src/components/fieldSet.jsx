@@ -13,14 +13,14 @@ const FieldSet = ({ children, legend, name }) => {
   return (
     <fieldset
       className={clsx(
-        "relative m-1 bg-lightGray p-2 rounded-lg mx-1 md:m-0 md:bg-transparent md:p-0 md:rounded-none max-w-lg sm:mx-auto",
+        "relative m-1 bg-lightGray p-2 rounded-lg mx-1 md:m-0 md:bg-transparent md:p-0 md:rounded-none w-full max-w-lg",
         activeFieldset === name ? "block" : "hidden md:block"
       )}
     >
       {legend && <legend dangerouslySetInnerHTML={{ __html: legend }} />}
       {children}
       <button
-        className="absolute top-0 right-0"
+        className="absolute top-0 right-0 hover:fill-turquoise"
         style={{ transform: "translateX(10%) translateY(-10%)" }}
         onClick={() => setState((prev) => ({ ...prev, activeFieldset: "" }))}
       >
