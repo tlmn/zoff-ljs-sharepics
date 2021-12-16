@@ -1,21 +1,36 @@
 import Layout from "../components/layout";
 import { Link } from "gatsby";
 import React from "react";
+import ToMenuIcon from "../assets/svg/inputIcons/toMenu";
+import useDataContext from "../lib/useDataContext";
+import clsx from "clsx";
 
-const TemplateLayout = ({ children }) => (
-  <Layout>
-    <div className="container grid-12">
-      <div className="col-span-12 py-1">
-        <Link
-          to="/"
-          className="hover:underline uppercase text-white font-headline italic"
-        >
-          ◂ zurück zur Übersicht
-        </Link>
+const TemplateLayout = ({ children }) => {
+  const {
+    state: { templateScale },
+  } = useDataContext();
+  return (
+    <Layout>
+      <div
+        className={clsx(
+          !templateScale
+            ? "bg-white w-screen h-screen fixed z-50 transition-all ease-in-out duration-75"
+            : "hidden bg-transparent"
+        )}
+      ></div>
+      <div className="container grid-12">
+        <div className="col-span-12 py-1">
+          <Link
+            to="/"
+            className="hover:text-turquoise hover:fill-turquoise uppercase text-white font-headline italic flex items-center gap-1 m-1"
+          >
+            <ToMenuIcon /> zurück zur Übersicht
+          </Link>
+        </div>
+        {children}
       </div>
-      {children}
-    </div>
-  </Layout>
-);
+    </Layout>
+  );
+};
 
 export default TemplateLayout;
