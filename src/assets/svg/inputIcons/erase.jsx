@@ -8,9 +8,9 @@ const Erase = () => (
     fill="none"
     viewBox="0 0 24 24"
   >
-    <circle cx="12" cy="12" r="12" fill="#DEDEDE"></circle>
+    <circle cx="12" cy="12" r="12"></circle>
     <path
-      fill="#fff"
+      style={{ fill: "#fff" }}
       fillRule="evenodd"
       d="M11.294 12L7 16.294l.706.706L12 12.706 16.294 17l.706-.706L12.706 12 17 7.706 16.294 7 12 11.294 7.706 7 7 7.706 11.294 12z"
       clipRule="evenodd"
