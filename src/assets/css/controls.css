@@ -5,9 +5,12 @@ select {
   margin-bottom: 1rem !important;
   padding: 0.8rem !important;
   @apply font-headline;
-  @apply italic;
   @apply font-bold;
   @apply w-full;
+}
+
+input {
+  padding-right: theme("spacing.3") !important;
 }
 
 input[type="file"] {
