@@ -1,71 +1,24 @@
 import React from "react";
-import MobileInputMenu from "../../components/mobileInputMenu";
-import MenuItem from "../../components/menuItem";
-import FieldSet from "../../components/fieldSet";
-import Input from "../../components/inputs/input";
-import Textarea from "../../components/inputs/textarea";
-import TextScale from "../../components/inputs/textScale";
-import DownloadButton from "../../components/inputs/downloadButton";
-import ColorThemesSelect from "../../components/inputs/colorThemesSelect";
+
+import ControlsMobile0 from "./slide-0/controlsMobile";
+import ControlsMobile1 from "./slide-1/controlsMobile";
+import ControlsMobile2 from "./slide-2/controlsMobile";
+import useDataContext from "../../lib/useDataContext";
 
 const ControlsMobile = () => {
-  const currentSlide = 0;
-  return (
-    <div className="block md:hidden fixed bottom-0 w-full left-0 z-20">
-      <div className="flex w-full justify-center">
-        <FieldSet name={`colorTheme`}>
-          <ColorThemesSelect />
-        </FieldSet>
-        <FieldSet name={`slides[${currentSlide}].data.category`}>
-          <Input
-            label="Titel"
-            propertyPath={`slides[${currentSlide}].data.category.content`}
-          />
-        </FieldSet>
-
-        <FieldSet name={`slides[${currentSlide}].data.body`}>
-          <Textarea
-            label="Text"
-            propertyPath={`slides[${currentSlide}].data.body.content`}
-            rows={3}
-            cols={30}
-          />
-          <TextScale propertyPath={`slides[${currentSlide}].data.body.scale`} />
-        </FieldSet>
-
-        <FieldSet name={`slides[${currentSlide}].data.localBranch`}>
-          <Textarea
-            label="Lokalgruppe (optional)"
-            propertyPath={`slides[${currentSlide}].data.localBranch.content`}
-            rows={3}
-          />
-        </FieldSet>
-      </div>
-      <MobileInputMenu>
-        <DownloadButton className="m-1" />
-        <MenuItem
-          legend={`Farbe`}
-          iconType={`color`}
-          targetFieldset={`colorTheme`}
-        />
-        <MenuItem
-          legend={`Titel`}
-          iconType={`title`}
-          targetFieldset={`slides[${currentSlide}].data.category`}
-        />
-        <MenuItem
-          legend={`Text`}
-          iconType={`text`}
-          targetFieldset={`slides[${currentSlide}].data.body`}
-        />
-        <MenuItem
-          legend={`Lokal&shy;gruppe`}
-          iconType={`localGroup`}
-          targetFieldset={`slides[${currentSlide}].data.localBranch`}
-        />
-      </MobileInputMenu>
-    </div>
-  );
+  const {
+    state: { currentSlide },
+  } = useDataContext();
+  switch (currentSlide) {
+    case 0:
+      return <ControlsMobile0 />;
+    case 1:
+      return <ControlsMobile1 />;
+    case 2:
+      return <ControlsMobile2 />;
+    default:
+      return <ControlsMobile0 />;
+  }
 };
 
 export default ControlsMobile;

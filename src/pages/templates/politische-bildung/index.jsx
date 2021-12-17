@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 
 import ControlsLeft from "../../../templates/politische-bildung/controlsLeft";
 import ControlsRight from "../../../templates/politische-bildung/controlsRight";
+import ControlsMobile from "../../../templates/politische-bildung/controlsMobile";
 import Template from "../../../templates/politische-bildung/template";
 import Template0 from "../../../templates/politische-bildung/slide-0/template";
 import Template1 from "../../../templates/politische-bildung/slide-1/template";
@@ -94,15 +95,16 @@ const PagePolitischeBildung = () => {
           })}
         </div>
 
-        <div className="col-span-3">
+        <div className="col-span-3 hidden md:block">
           <ControlsLeft />
         </div>
-        <div className="col-span-6">
+        <div className="col-span-full md:col-span-6 mx-2 md:p-0">
           <Template />
         </div>
-        <div className="col-span-3">
+        <div className="col-span-3 hidden md:block">
           <ControlsRight />
         </div>
+        <ControlsMobile />
       </TemplateLayout>
     </DataContextProvider>
   );
