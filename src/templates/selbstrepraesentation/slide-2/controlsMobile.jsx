@@ -10,7 +10,7 @@ import ColorThemesSelect from "../../../components/inputs/colorThemesSelect";
 const ControlsMobile = () => {
   const currentSlide = 2;
   return (
-    <div className="block md:hidden absolute bottom-0 w-full left-0 z-20">
+    <div className="block md:hidden fixed bottom-0 w-full left-0 z-20">
       <div className="flex w-full justify-center">
         <FieldSet name={`colorTheme`}>
           <ColorThemesSelect />
