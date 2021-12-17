@@ -54,7 +54,7 @@ const ColorThemesSelect = () => {
                     state.colorTheme ===
                       colorThemes.filter(
                         (theme) => theme.label === colorTheme
-                      )[0].label && `border-lightGray`
+                      )[0].label && `border-white`
                   }`}
                 />
               </div>
@@ -106,7 +106,7 @@ const ColorThemesSelect = () => {
                     state.colorTheme ===
                       colorThemes.filter(
                         (theme) => theme.label === colorTheme
-                      )[0].label && `border-lightGray`
+                      )[0].label && `border-white`
                   }`}
                 />
               </div>
