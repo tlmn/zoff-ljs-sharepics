@@ -3,12 +3,18 @@ import React from "react";
 const Close = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="48"
-    height="48"
+    width="30"
+    height="30"
     fill="none"
     viewBox="0 0 48 48"
   >
-    <circle cx="24" cy="24" r="24" fill="#fff"></circle>
+    <circle
+      cx="24"
+      cy="24"
+      r="24"
+      fill="#fff"
+      style={{ boxShadow: "rgb(0, 0, 0) 5px 5px 15px 5px" }}
+    ></circle>
     <path
       style={{ fill: "#252525" }}
       fillRule="evenodd"
