@@ -3,99 +3,72 @@ import { formatEmojis, getColor } from "../../lib/lib";
 
 import LogoText from "../../assets/svg/logo-text";
 import useDataContext from "../../lib/useDataContext";
-import useWindowResize from "../../lib/useWindowResize";
-import { useRef } from "react";
-import { useEffect } from "react";
+import TemplateWrapper from "../../components/templateWrapper";
 
 const Template = () => {
-  const { state, setState } = useDataContext();
-  const ref = useRef(null);
-  const { width } = useWindowResize();
+  const { state } = useDataContext();
 
-  useEffect(() => {
-    setState((prev) => ({
-      ...prev,
-      scaleFactor: ref?.current?.clientWidth / 1080,
-    }));
-  }, [ref, width]);
-
-  const { scaleFactor } = state;
   return (
-    <div className="relative" ref={ref}>
-      <div
-        className={`p-4 // flex flex-col absolute // border-1 // template ${
-          state.templateScale ? `` : `relative`
-        }`}
-        style={{
-          backgroundColor: getColor(state, 0),
-          transformOrigin: "0 0",
-          transform: state.templateScale ? `scale(${scaleFactor})` : ``,
+    <TemplateWrapper className="p-4">
+      <span
+        className="mb-3 text-center text-xl font-bold font-headline italic"
+        dangerouslySetInnerHTML={{
+          __html:
+            state.slides[state.currentSlide].data.category.content === ""
+              ? "\u00a0"
+              : state.slides[state.currentSlide].data.category.content,
         }}
-        ref={state.slides[state.currentSlide].ref}
-      >
+        style={{
+          color: getColor(state, 1),
+        }}
+      />
+      <div className="mb-3 flex-1 flex">
         <span
-          className="mb-3 text-center text-xl font-bold font-headline italic"
-          dangerouslySetInnerHTML={{
-            __html:
-              state.slides[state.currentSlide].data.category.content === ""
-                ? "\u00a0"
-                : state.slides[state.currentSlide].data.category.content,
-          }}
+          className="block // w-full // self-center // text-center break-all font-bold font-headline leading-none"
           style={{
+            fontSize: `${
+              state.slides[state.currentSlide].data.body.scale.value
+            }px`,
             color: getColor(state, 1),
           }}
-        />
-        <div className="mb-3 flex-1 flex">
-          <span
-            className="block // w-full // self-center // text-center break-all font-bold font-headline leading-none"
-            style={{
-              fontSize: `${
-                state.slides[state.currentSlide].data.body.scale.value
-              }px`,
-              color: getColor(state, 1),
-            }}
-            dangerouslySetInnerHTML={{
-              __html: formatEmojis(
-                state.slides[state.currentSlide].data.body.content
-                  .replace(
-                    /\{/gi,
-                    `<div class="stripeContainer"><div class="stripeText" style="color: ${getColor(
-                      state,
-                      0
-                    )}">`
-                  )
-                  .replace(
-                    /\}/gi,
-                    `</div><div class="stripeElement" style="transform:rotate(${
-                      Math.random() * 5 - 2.5
-                    }deg); background-color: ${getColor(
-                      state,
-                      1
-                    )}"></div></div>`
-                  )
-                  .replace(/\n/gi, `<br/>`)
-              ),
-            }}
-          />
-        </div>
-        <LogoText className="self-center" fillColor={getColor(state, 1)} />
-        <div
-          className="uppercase font-headline text-center text-md leading-none mt-2"
-          style={{
-            color: getColor(state, 1),
-            transform: "rotate(-6deg)",
-          }}
           dangerouslySetInnerHTML={{
-            __html:
-              state.slides[state.currentSlide].data.localBranch.content === ""
-                ? "\u00a0"
-                : state.slides[
-                    state.currentSlide
-                  ].data.localBranch.content.replace(/\n/gi, `<br/>`),
+            __html: formatEmojis(
+              state.slides[state.currentSlide].data.body.content
+                .replace(
+                  /\{/gi,
+                  `<div class="stripeContainer"><div class="stripeText" style="color: ${getColor(
+                    state,
+                    0
+                  )}">`
+                )
+                .replace(
+                  /\}/gi,
+                  `</div><div class="stripeElement" style="transform:rotate(${
+                    Math.random() * 5 - 2.5
+                  }deg); background-color: ${getColor(state, 1)}"></div></div>`
+                )
+                .replace(/\n/gi, `<br/>`)
+            ),
           }}
         />
       </div>
-    </div>
+      <LogoText className="self-center" fillColor={getColor(state, 1)} />
+      <div
+        className="uppercase font-headline text-center text-md leading-none mt-2"
+        style={{
+          color: getColor(state, 1),
+          transform: "rotate(-6deg)",
+        }}
+        dangerouslySetInnerHTML={{
+          __html:
+            state.slides[state.currentSlide].data.localBranch.content === ""
+              ? "\u00a0"
+              : state.slides[
+                  state.currentSlide
+                ].data.localBranch.content.replace(/\n/gi, `<br/>`),
+        }}
+      />
+    </TemplateWrapper>
   );
 };
 
