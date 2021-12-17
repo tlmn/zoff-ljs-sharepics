@@ -16,7 +16,7 @@ const ColorThemesSelect = () => {
       </div>
       <div className="grid-cols-2 grid">
         {corporateThemes.map((colorTheme) => (
-          <div className="col-span-1">
+          <div className="col-span-1" key={colorTheme}>
             <input
               type="radio"
               value={
@@ -67,7 +67,7 @@ const ColorThemesSelect = () => {
       </div>
       <div className="grid-cols-4 grid">
         {secondaryThemes.map((colorTheme) => (
-          <div className="col-span-1">
+          <div className="col-span-1" key={colorTheme}>
             <input
               type="radio"
               value={

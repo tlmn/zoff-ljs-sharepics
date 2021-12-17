@@ -19,7 +19,9 @@ const CustomSelect = ({ availableValues, propertyPath, label, ...props }) => {
         {...props}
       >
         {availableValues.map((item) => (
-          <option value={item.value}>{item.label}</option>
+          <option value={item.value} key={item.value}>
+            {item.label}
+          </option>
         ))}
       </select>
     </>

@@ -12,7 +12,7 @@ const PageIndex = () => (
         </h1>
       </div>
       {templates.map(({ link, name, thumbnailSrc }) => (
-        <div className="col-span-6 sm:col-span-4 text-center">
+        <div className="col-span-6 sm:col-span-4 text-center" key={name}>
           <Link
             to={link}
             className="no-underline hover:text-green max-w-full flex flex-col md:flex-col-reverse "
