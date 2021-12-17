@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 
 import ControlsLeft from "../../../templates/mitglieder/controlsLeft";
 import ControlsRight from "../../../templates/mitglieder/controlsRight";
+import ControlsMobile from "../../../templates/mitglieder/controlsMobile";
 import Template from "../../../templates/mitglieder/template";
 import Template0 from "../../../templates/mitglieder/slide-0/template";
 import Template1 from "../../../templates/mitglieder/slide-1/template";
@@ -91,15 +92,16 @@ const PageMitglieder = () => {
           })}
         </div>
 
-        <div className="col-span-3">
+        <div className="col-span-3 hidden md:block">
           <ControlsLeft />
         </div>
-        <div className="col-span-6">
+        <div className="col-span-full md:col-span-6 mx-2 md:p-0">
           <Template />
         </div>
-        <div className="col-span-3">
+        <div className="col-span-3 hidden md:block">
           <ControlsRight />
         </div>
+        <ControlsMobile />
       </TemplateLayout>
     </DataContextProvider>
   );

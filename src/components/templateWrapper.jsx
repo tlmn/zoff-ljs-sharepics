@@ -34,10 +34,7 @@ const TemplateWrapper = ({
           className
         )}
         style={{
-          backgroundColor:
-            primaryColor === ""
-              ? getColor(state, bgColor)
-              : getPrimaryColor(state),
+          backgroundColor: getColor(state, bgColor),
           transformOrigin: "0 0",
           transform:
             templateScale && !isThumbnail ? `scale(${scaleFactor})` : ``,
