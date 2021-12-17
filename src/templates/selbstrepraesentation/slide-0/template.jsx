@@ -1,17 +1,33 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { formatEmojis, getColor } from "../../../lib/lib";
 
 import useDataContext from "../../../lib/useDataContext";
+import useWindowResize from "../../../lib/useWindowResize";
 
 const Template = ({ thumbnail = false }) => {
-  const { state } = useDataContext();
+  const { state, setState } = useDataContext();
+  const ref = useRef(null);
+  const { width } = useWindowResize();
+
+  useEffect(() => {
+    setState((prev) => ({
+      ...prev,
+      scaleFactor: ref?.current?.clientWidth / 1080,
+    }));
+  }, [ref, width]);
+
+  const { scaleFactor } = state;
   return (
-    <div className={`${!thumbnail ? `col-span-6` : `col-span-4`} relative`}>
+    <div className="relative" ref={ref}>
       <div
-        className={`p-4 // flex justify-center items-center absolute // border-1 // template ${
-          state.templateScale && !thumbnail ? `template-scale` : `relative`
+        className={`p-4 // flex justify-center items-center absolute // border-1 // template origin-top-left ${
+          state.templateScale && !thumbnail ? `` : `relative`
         }`}
-        style={{ backgroundColor: getColor(state, 0) }}
+        style={{
+          backgroundColor: getColor(state, 0),
+          transform:
+            state.templateScale && !thumbnail ? `scale(${scaleFactor})` : ``,
+        }}
         ref={!thumbnail ? state.slides[0].ref : null}
       >
         <div class="stripeContainer">

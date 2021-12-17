@@ -1,18 +1,34 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { formatEmojis, getColor } from "../../../lib/lib";
 
-import LogoText from "../../../assets/svg/logo-text";
 import useDataContext from "../../../lib/useDataContext";
+import useWindowResize from "../../../lib/useWindowResize";
+import LogoText from "../../../assets/svg/logo-text";
 
 const Template = ({ thumbnail = false }) => {
-  const { state } = useDataContext();
+  const { state, setState } = useDataContext();
+  const ref = useRef(null);
+  const { width } = useWindowResize();
+
+  useEffect(() => {
+    setState((prev) => ({
+      ...prev,
+      scaleFactor: ref?.current?.clientWidth / 1080,
+    }));
+  }, [ref, width]);
+
+  const { scaleFactor } = state;
   return (
-    <div className={`${!thumbnail ? `col-span-6` : ``} relative`}>
+    <div className="relative" ref={ref}>
       <div
         className={`p-4 // flex flex-col absolute // border-1 // template ${
-          state.templateScale && !thumbnail ? `template-scale` : `relative`
+          state.templateScale && !thumbnail ? `origin-top-left` : `relative`
         }`}
-        style={{ backgroundColor: getColor(state, 1) }}
+        style={{
+          backgroundColor: getColor(state, 1),
+          transform:
+            state.templateScale && !thumbnail ? `scale(${scaleFactor})` : ``,
+        }}
         ref={!thumbnail ? state.slides[2].ref : null}
       >
         <div className="flex h-full">
