@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import React from "react";
-import { updateProperty } from "../lib/lib";
 import useDataContext from "../lib/useDataContext";
 import CloseIcon from "../assets/svg/inputIcons/close";
 
@@ -17,7 +16,7 @@ const FieldSet = ({ children, legend, name }) => {
         activeFieldset === name ? "block" : "hidden md:block"
       )}
       style={{
-        boxShadow: "5px 5px 15px 5px rgba(0,0,0,0.3)",
+        boxShadow: "rgb(37, 37, 37) 5px 5px 15px 5px",
       }}
     >
       {legend && <legend dangerouslySetInnerHTML={{ __html: legend }} />}
