@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 
 import ControlsLeft from "../../../templates/pass-the-mic/controlsLeft";
 import ControlsRight from "../../../templates/pass-the-mic/controlsRight";
+import ControlsMobile from "../../../templates/pass-the-mic/controlsMobile";
 import Template from "../../../templates/pass-the-mic/template";
 import Template0 from "../../../templates/pass-the-mic/slide-0/template";
 import Template1 from "../../../templates/pass-the-mic/slide-1/template";
@@ -11,6 +12,7 @@ import TemplateLayout from "../../../components/templateLayout";
 const PagePassTheMic = () => {
   const [state, setState] = useState({
     currentSlide: 0,
+    activeFieldset: "",
     slides: [
       {
         data: {
@@ -70,15 +72,16 @@ const PagePassTheMic = () => {
           })}
         </div>
 
-        <div className="col-span-3">
+        <div className="col-span-3 hidden md:block">
           <ControlsLeft />
         </div>
-        <div className="col-span-6">
+        <div className="col-span-full md:col-span-6 mx-2 md:p-0">
           <Template />
         </div>
-        <div className="col-span-3">
+        <div className="col-span-3 hidden md:block">
           <ControlsRight />
         </div>
+        <ControlsMobile />
       </TemplateLayout>
     </DataContextProvider>
   );
