@@ -1,17 +1,18 @@
 import React, { useRef, useEffect } from "react";
 import useWindowResize from "../lib/useWindowResize";
 import useDataContext from "../lib/useDataContext";
-import { getColor, getPrimaryColor } from "../lib/lib";
+import { getColor } from "../lib/lib";
 import clsx from "clsx";
 
 const TemplateWrapper = ({
   children,
   className,
   isThumbnail = false,
-  bgColor = 0,
+  colorThemeColorOrder = 0,
+  bgColor = "#fff",
 }) => {
   const {
-    state: { currentSlide, scaleFactor, templateScale, primaryColor },
+    state: { currentSlide, scaleFactor, templateScale, colorTheme },
     state,
     setState,
   } = useDataContext();
@@ -34,7 +35,10 @@ const TemplateWrapper = ({
           className
         )}
         style={{
-          backgroundColor: getColor(state, bgColor),
+          backgroundColor:
+            typeof colorTheme !== "undefined"
+              ? getColor(state, colorThemeColorOrder)
+              : bgColor,
           transformOrigin: "0 0",
           transform:
             templateScale && !isThumbnail ? `scale(${scaleFactor})` : ``,
