@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 
 import ControlsLeft from "../../../templates/selbstrepraesentation/controlsLeft";
 import ControlsRight from "../../../templates/selbstrepraesentation/controlsRight";
+import ControlsMobile from "../../../templates/selbstrepraesentation/controlsMobile";
 import Template from "../../../templates/selbstrepraesentation/template";
 import Template0 from "../../../templates/selbstrepraesentation/slide-0/template";
 import Template1 from "../../../templates/selbstrepraesentation/slide-1/template";
@@ -12,6 +13,7 @@ import TemplateLayout from "../../../components/templateLayout";
 const PageSelbstrepraesentation = () => {
   const [state, setState] = useState({
     currentSlide: 0,
+    activeFieldset: "",
     slides: [
       {
         data: {
@@ -86,15 +88,16 @@ const PageSelbstrepraesentation = () => {
             }
           })}
         </div>
-        <div className="col-span-3">
+        <div className="col-span-3 hidden md:block">
           <ControlsLeft />
         </div>
-        <div className="col-span-6">
+        <div className="col-span-full md:col-span-6 mx-2 md:p-0">
           <Template />
         </div>
-        <div className="col-span-3">
+        <div className="col-span-3 hidden md:block">
           <ControlsRight />
         </div>
+        <ControlsMobile />
       </TemplateLayout>
     </DataContextProvider>
   );
