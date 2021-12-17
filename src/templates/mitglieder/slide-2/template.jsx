@@ -8,7 +8,7 @@ import TemplateWrapper from "../../../components/templateWrapper";
 const Template = ({ thumbnail = false }) => {
   const { state } = useDataContext();
   return (
-    <TemplateWrapper isThumbnail={thumbnail} bgColor={1}>
+    <TemplateWrapper isThumbnail={thumbnail} colorThemeColorOrder={1}>
       <div className="p-4 flex flex-col h-full">
         <span
           className="flex-1 text-left font-headline uppercase italic leading-tight break-word overflow-hidden"
