@@ -23,7 +23,7 @@ const FieldSet = ({ children, legend, name }) => {
       {children}
       <button
         className="absolute top-0 right-0 hover:fill-green"
-        style={{ transform: "translateX(10%) translateY(-10%)" }}
+        style={{ transform: "translateX(30%) translateY(-30%)" }}
         onClick={() => setState((prev) => ({ ...prev, activeFieldset: "" }))}
       >
         <CloseIcon />
