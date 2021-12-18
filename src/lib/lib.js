@@ -6,14 +6,14 @@ import { toJpeg } from "html-to-image";
 import { saveAs } from "file-saver";
 import slugify from "react-slugify";
 
-export const html2image = async ({ state, setState }, fileName = "solid") => {
+export const html2image = async ({ state, setState }, fileName = "ljs") => {
   setState((prev) => ({ ...prev, templateScale: false }));
   toJpeg(state.slides[state.currentSlide].ref.current, {
     quality: 1,
-    width: 1080,
-    height: 1080,
+    canvasWidth: 1080,
+    canvasHeight: 1080,
   }).then(function (blob) {
-    saveAs(blob, `sharepic-${slugify(fileName.substring)}`);
+    saveAs(blob, `sharepic-${slugify(fileName)}`);
     setState((prev) => ({ ...prev, templateScale: true }));
   });
 };

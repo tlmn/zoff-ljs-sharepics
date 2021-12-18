@@ -12,3 +12,24 @@
   @apply gap-2;
   @apply grid;
 }
+
+.fill-green > svg > path {
+  fill: theme("colors.green.DEFAULT");
+  @apply transition-all ease-in-out duration-200;
+}
+
+.fill-white > svg > path {
+  fill: #fff;
+  @apply transition-all ease-in-out duration-200;
+}
+
+.fill-lightGray > svg > path,
+.fill-lightGray > svg > circle {
+  fill: theme("colors.lightGray");
+  @apply transition-all ease-in-out duration-200;
+}
+
+.hover\:fill-green:hover > svg > path,
+.hover\:fill-green:hover > svg > circle {
+  fill: #00ffc2;
+}

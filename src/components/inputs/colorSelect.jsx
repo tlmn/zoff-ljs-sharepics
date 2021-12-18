@@ -8,7 +8,7 @@ const ColorSelect = () => {
 
   return (
     <>
-      <div className="uppercase font-headline italic text-white">
+      <div className="uppercase font-headline italic text-black md:text-white">
         Corporate Design
       </div>
       <div className="grid-cols-2 grid">
@@ -30,8 +30,7 @@ const ColorSelect = () => {
                   alt={`Farbschema Vorschau für ${primaryColor.name}`}
                   src={`/assets/images/colorThemes/${primaryColor.label}.png`}
                   className={`colorThumbnail ${
-                    state.primaryColor === primaryColor.label &&
-                    `border-lightGray`
+                    state.primaryColor === primaryColor.label && `border-white`
                   }`}
                 />
               </div>

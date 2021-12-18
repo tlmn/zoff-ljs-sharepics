@@ -5,9 +5,12 @@ select {
   margin-bottom: 1rem !important;
   padding: 0.8rem !important;
   @apply font-headline;
-  @apply italic;
   @apply font-bold;
   @apply w-full;
+}
+
+input {
+  padding-right: theme("spacing.3") !important;
 }
 
 input[type="file"] {
@@ -26,13 +29,19 @@ input[type="radio"] {
 label {
   @apply italic;
   @apply font-bold;
-  @apply text-white;
+  @apply text-black;
   @apply uppercase;
   @apply font-headline;
 }
 
+@screen md {
+  label {
+    @apply text-white;
+  }
+}
+
 .btn {
-  @apply bg-turquoise;
+  @apply bg-green;
   @apply uppercase;
   @apply text-darkGray;
   @apply font-headline;
@@ -45,12 +54,8 @@ label {
   @apply duration-200;
 }
 
-.btn-download {
-  @apply w-full;
-}
-
 .btn:hover {
-  @apply bg-turquoise-lighter;
+  @apply bg-green-lighter;
 }
 
 h2.controls {

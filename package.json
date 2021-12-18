@@ -4,6 +4,7 @@
   "version": "1.1",
   "author": "mail@tlmn.io",
   "dependencies": {
+    "clsx": "^1.1.1",
     "emoji-regex": "^8.0.0",
     "file-saver": "^2.0.5",
     "gatsby": "^3.14.0",
@@ -24,6 +25,7 @@
     "react-draggable": "^4.4.4",
     "react-helmet": "^6.1.0",
     "react-images-upload": "^1.2.8",
+    "react-native-hide-with-keyboard": "^1.2.1",
     "react-slugify": "^2.0.4"
   },
   "license": "MIT",

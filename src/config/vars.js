@@ -1,7 +1,7 @@
 export const colors = [
   { name: "darkGray", value: "#252525" },
   { name: "red", value: "#E2190C" },
-  { name: "turquoise", value: "#00FFC2" },
+  { name: "green", value: "#00FFC2" },
   { name: "violet", value: "#C9CEFF" },
   { name: "white", value: "#fff" },
 ];
@@ -13,8 +13,8 @@ export const textPositions = [
 ];
 
 export const corporateThemes = [
-  "darkGray_turquoise",
-  "turquoise_darkGray",
+  "darkGray_green",
+  "green_darkGray",
   "violet_red",
   "red_violet",
 ];
@@ -28,14 +28,14 @@ export const secondaryThemes = [
 
 export const colorThemes = [
   {
-    label: "darkGray_turquoise",
+    label: "darkGray_green",
     name: "dunkelgrau & türkis",
-    colors: ["darkGray", "turquoise"],
+    colors: ["darkGray", "green"],
   },
   {
-    label: "turquoise_darkGray",
+    label: "green_darkGray",
     name: "türkis & dunkelgrau",
-    colors: ["turquoise", "darkGray"],
+    colors: ["green", "darkGray"],
   },
   {
     label: "violet_red",
@@ -70,29 +70,29 @@ export const colorThemes = [
 ];
 
 export const primaryColors = [
-  { label: "turquoise", name: "türkis" },
+  { label: "green", name: "türkis" },
   { label: "violet", name: "violet" },
   { label: "red", name: "rot" },
 ];
 
 export const templates = [
   {
-    name: "Diskursintervention",
+    name: "Diskurs&shy;inter&shy;vention",
     link: "templates/diskursintervention",
     thumbnailSrc: "../assets/images/templates/diskursintervention.jpg",
   },
   {
-    name: "Diskursintervention mit Bild",
+    name: "Diskurs&shy;inter&shy;vention mit Bild",
     link: "templates/diskursintervention-mit-bild",
     thumbnailSrc: "../assets/images/templates/diskursintervention-mit-bild.jpg",
   },
   {
-    name: "Selbstrepräsentation",
+    name: "Selbst&shy;re&shy;präsen&shy;tation",
     link: "templates/selbstrepraesentation",
     thumbnailSrc: "../assets/images/templates/selbstrepraesentation.jpg",
   },
   {
-    name: "Mitglieder",
+    name: "Mit&shy;glieder",
     link: "templates/mitglieder",
     thumbnailSrc: "../assets/images/templates/mitglieder.jpg",
   },
@@ -107,7 +107,7 @@ export const templates = [
     thumbnailSrc: "../assets/images/templates/pass-the-mic.jpg",
   },
   {
-    name: "Veranstaltung",
+    name: "Veran&shy;staltung",
     link: "templates/veranstaltung",
     thumbnailSrc: "../assets/images/templates/veranstaltung.jpg",
   },
