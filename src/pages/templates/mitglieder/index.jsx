@@ -50,7 +50,7 @@ const PageMitglieder = () => {
   return (
     <DataContextProvider value={{ state, setState }}>
       <TemplateLayout>
-        <div className="col-span-12 flex justify-center py-2">
+        <div className="col-span-12 flex justify-center">
           {state.slides.map((slide, i) => {
             switch (i) {
               case 0:
