@@ -27,6 +27,15 @@ const ControlsMobile = () => {
             propertyPath={`slides[[${currentSlide}].data.body.scale`}
           />
         </FieldSet>
+
+        <FieldSet name={`slides[${currentSlide}].data.localBranch`}>
+          <Textarea
+            label="Lokalgruppe (optional)"
+            propertyPath={`slides[${currentSlide}].data.localBranch.content`}
+            rows={2}
+            cols={30}
+          />
+        </FieldSet>
       </div>
 
       <MobileInputMenu>
@@ -40,6 +49,11 @@ const ControlsMobile = () => {
           legend={`Text`}
           iconType={`text`}
           targetFieldset={`slides[${currentSlide}].data.body`}
+        />
+        <MenuItem
+          legend={`Lokal&shy;gruppe`}
+          iconType={`localGroup`}
+          targetFieldset={`slides[${currentSlide}].data.localBranch`}
         />
       </MobileInputMenu>
     </div>
