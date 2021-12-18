@@ -17,7 +17,7 @@ const Template = ({ thumbnail = false }) => {
             fontSize: `${state.slides[2].data.body.scale.value}px`,
           }}
           dangerouslySetInnerHTML={{
-            __html: state.slides[2].data.body.content,
+            __html: state.slides[2].data.body.content.replace(/\n/gi, `<br />`),
           }}
         />
         <div className="flex flex-col justify-center w-full">
@@ -36,7 +36,7 @@ const Template = ({ thumbnail = false }) => {
                   ? "\u00a0"
                   : state.slides[2].data.localBranch.content.replace(
                       /\n/gi,
-                      `<br/>`
+                      `<br />`
                     ),
             }}
           />
