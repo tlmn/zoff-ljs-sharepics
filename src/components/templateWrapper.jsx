@@ -12,10 +12,11 @@ const TemplateWrapper = ({
   bgColor = "#fff",
 }) => {
   const {
-    state: { ref, scaleFactor, templateScale, colorTheme },
+    state: { currentSlide, scaleFactor, templateScale, colorTheme },
     state,
     setState,
   } = useDataContext();
+  const { ref } = state.slides[currentSlide];
   const templateRef = useRef(null);
   const { width } = useWindowResize();
 
