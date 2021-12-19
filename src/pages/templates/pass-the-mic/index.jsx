@@ -8,6 +8,7 @@ import Template0 from "../../../templates/pass-the-mic/slide-0/template";
 import Template1 from "../../../templates/pass-the-mic/slide-1/template";
 import { Provider as DataContextProvider } from "../../../lib/useDataContext";
 import TemplateLayout from "../../../components/templateLayout";
+import ThumbnailButton from "../../../components/thumbnailButton";
 
 const PagePassTheMic = () => {
   const [state, setState] = useState({
@@ -46,25 +47,15 @@ const PagePassTheMic = () => {
             switch (i) {
               case 0:
                 return (
-                  <button
-                    onClick={() =>
-                      setState((prev) => ({ ...prev, currentSlide: i }))
-                    }
-                    className="is-thumbnail hover:opacity-75"
-                  >
+                  <ThumbnailButton currentSlide={i}>
                     <Template0 thumbnail={true} />
-                  </button>
+                  </ThumbnailButton>
                 );
               case 1:
                 return (
-                  <button
-                    onClick={() =>
-                      setState((prev) => ({ ...prev, currentSlide: i }))
-                    }
-                    className="is-thumbnail hover:opacity-75"
-                  >
+                  <ThumbnailButton currentSlide={i}>
                     <Template1 thumbnail={true} />
-                  </button>
+                  </ThumbnailButton>
                 );
               default:
                 return null;

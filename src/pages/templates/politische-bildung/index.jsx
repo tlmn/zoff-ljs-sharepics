@@ -9,6 +9,7 @@ import Template1 from "../../../templates/politische-bildung/slide-1/template";
 import Template2 from "../../../templates/politische-bildung/slide-2/template";
 import { Provider as DataContextProvider } from "../../../lib/useDataContext";
 import TemplateLayout from "../../../components/templateLayout";
+import ThumbnailButton from "../../../components/thumbnailButton";
 
 const PagePolitischeBildung = () => {
   const [state, setState] = useState({
@@ -58,36 +59,21 @@ const PagePolitischeBildung = () => {
             switch (i) {
               case 0:
                 return (
-                  <button
-                    onClick={() =>
-                      setState((prev) => ({ ...prev, currentSlide: i }))
-                    }
-                    className="is-thumbnail hover:opacity-75"
-                  >
+                  <ThumbnailButton currentSlide={i}>
                     <Template0 thumbnail={true} />
-                  </button>
+                  </ThumbnailButton>
                 );
               case 1:
                 return (
-                  <button
-                    onClick={() =>
-                      setState((prev) => ({ ...prev, currentSlide: i }))
-                    }
-                    className="is-thumbnail hover:opacity-75"
-                  >
+                  <ThumbnailButton currentSlide={i}>
                     <Template1 thumbnail={true} />
-                  </button>
+                  </ThumbnailButton>
                 );
               case 2:
                 return (
-                  <button
-                    onClick={() =>
-                      setState((prev) => ({ ...prev, currentSlide: i }))
-                    }
-                    className="is-thumbnail hover:opacity-75"
-                  >
+                  <ThumbnailButton currentSlide={i}>
                     <Template2 thumbnail={true} />
-                  </button>
+                  </ThumbnailButton>
                 );
               default:
                 return null;
