@@ -19,7 +19,7 @@ const TemplateLayout = ({ children }) => {
         )}
       ></div>
       <div className="container grid-12">
-        <div className="col-span-12 py-1">
+        <div className="col-span-12">
           <Link
             to="/"
             className="hover:text-green hover:fill-green uppercase text-white font-headline italic flex items-center gap-1 m-1"
