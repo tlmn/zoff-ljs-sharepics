@@ -5,7 +5,7 @@ import FieldSet from "../../components/fieldSet";
 import Input from "../../components/inputs/input";
 import Textarea from "../../components/inputs/textarea";
 import TextScale from "../../components/inputs/textScale";
-import DownloadButton from "../../components/inputs/downloadButton";
+
 import ColorThemesSelect from "../../components/inputs/colorThemesSelect";
 
 const ControlsMobile = () => {
@@ -36,7 +36,6 @@ const ControlsMobile = () => {
         </FieldSet>
       </div>
       <MobileInputMenu>
-        <DownloadButton className="m-1" />
         <MenuItem
           legend={`Farbe`}
           iconType={`color`}

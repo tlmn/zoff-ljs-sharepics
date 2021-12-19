@@ -6,7 +6,7 @@ import CustomSelect from "../../components/inputs/customSelect";
 import BgImage from "../../components/inputs/bgImage";
 import Textarea from "../../components/inputs/textarea";
 import TextScale from "../../components/inputs/textScale";
-import DownloadButton from "../../components/inputs/downloadButton";
+
 import ColorThemesSelect from "../../components/inputs/colorThemesSelect";
 import { textPositions } from "../../config/vars";
 
@@ -47,7 +47,6 @@ const ControlsMobile = () => {
       </div>
 
       <MobileInputMenu>
-        <DownloadButton className="m-1" />
         <MenuItem
           legend={`Farbe`}
           iconType={`color`}

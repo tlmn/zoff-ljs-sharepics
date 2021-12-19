@@ -36,7 +36,6 @@ const ControlsMobile = () => {
       </div>
 
       <MobileInputMenu>
-        <DownloadButton className="m-1" />
         <MenuItem
           legend={`Farbe`}
           iconType={`color`}
