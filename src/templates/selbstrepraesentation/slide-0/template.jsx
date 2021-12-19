@@ -6,6 +6,9 @@ import useDataContext from "../../../lib/useDataContext";
 
 const Template = ({ thumbnail = false }) => {
   const { state } = useDataContext();
+  const {
+    data: { body },
+  } = state.slides[0];
 
   return (
     <TemplateWrapper
@@ -18,13 +21,11 @@ const Template = ({ thumbnail = false }) => {
             className="text-left // font-headline italic font-bold"
             dangerouslySetInnerHTML={{
               __html:
-                state.slides[0].data.body.content === ""
-                  ? "\u00a0"
-                  : formatEmojis(state.slides[0].data.body.content),
+                body.content === "" ? "\u00a0" : formatEmojis(body.content),
             }}
             style={{
               color: getColor(state, 0),
-              fontSize: `${state.slides[0].data.body.scale.value}px`,
+              fontSize: `${body.scale.value}px`,
               transform: "rotate(-6deg)",
             }}
           />

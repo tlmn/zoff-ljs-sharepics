@@ -7,24 +7,25 @@ import TemplateWrapper from "../../../components/templateWrapper";
 
 const Template = ({ thumbnail = false }) => {
   const { state } = useDataContext();
+  const {
+    data: { body, localBranch },
+  } = state.slides[2];
 
   return (
     <TemplateWrapper
       isThumbnail={thumbnail}
-      bgColor={getColor(state, 1)}
-      className="p-4 // flex flex-col absolute // border-1"
+      colorThemeColorOrder={1}
+      className="p-4 flex flex-col absolute border-1"
     >
       <div className="flex h-full">
         <span
-          className="block flex-1 // w-full // self-start // text-left font-bold font-headline leading-tight break-word overflow-hidden"
+          className="block flex-1 w-full self-start text-left font-bold font-headline leading-tight break-word overflow-hidden"
           style={{
-            fontSize: `${state.slides[2].data.body.scale.value}px`,
+            fontSize: `${body.scale.value}px`,
             color: getColor(state, 0),
           }}
           dangerouslySetInnerHTML={{
-            __html: formatEmojis(
-              state.slides[2].data.body.content.replace(/\n/gi, `<br/>`)
-            ),
+            __html: formatEmojis(body.content.replace(/\n/gi, `<br/>`)),
           }}
         />
       </div>
@@ -40,12 +41,9 @@ const Template = ({ thumbnail = false }) => {
           }}
           dangerouslySetInnerHTML={{
             __html:
-              state.slides[2].data.localBranch.content === ""
+              localBranch.content === ""
                 ? "\u00a0"
-                : state.slides[2].data.localBranch.content.replace(
-                    /\n/gi,
-                    `<br/>`
-                  ),
+                : localBranch.content.replace(/\n/gi, `<br/>`),
           }}
         />
       </div>

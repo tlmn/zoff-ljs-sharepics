@@ -8,6 +8,9 @@ import TemplateWrapper from "../../components/templateWrapper";
 
 const Template = () => {
   const { state } = useDataContext();
+  const {
+    data: { type, event, speaker, location, date, localBranch },
+  } = state.slides[0];
 
   return (
     <TemplateWrapper>
@@ -16,10 +19,7 @@ const Template = () => {
           <span
             className="mb-3 text-center text-xl font-bold font-headline uppercase w-full block"
             dangerouslySetInnerHTML={{
-              __html:
-                state.slides[state.currentSlide].data.type.content === ""
-                  ? "\u00a0"
-                  : state.slides[state.currentSlide].data.type.content,
+              __html: type.content === "" ? "\u00a0" : type.content,
             }}
             style={{
               color: getColor(state, 1),
@@ -28,27 +28,17 @@ const Template = () => {
           <span
             className="block // w-full // self-center // text-left font-bold font-headline leading-none"
             style={{
-              fontSize: `${
-                state.slides[state.currentSlide].data.event.scale.value
-              }px`,
+              fontSize: `${event.scale.value}px`,
               color: getColor(state, 1),
             }}
             dangerouslySetInnerHTML={{
-              __html: formatEmojis(
-                state.slides[state.currentSlide].data.event.content.replace(
-                  /\n/gi,
-                  `<br/>`
-                )
-              ),
+              __html: formatEmojis(event.content.replace(/\n/gi, `<br/>`)),
             }}
           />
           <div
             className="mt-3 flex-1 text-left // font-headline text-lg font-bold uppercase break-word overflow-hidden"
             dangerouslySetInnerHTML={{
-              __html:
-                state.slides[state.currentSlide].data.speaker.content === ""
-                  ? "\u00a0"
-                  : state.slides[state.currentSlide].data.speaker.content,
+              __html: speaker.content === "" ? "\u00a0" : speaker.content,
             }}
             style={{
               color: getColor(state, 1),
@@ -67,12 +57,7 @@ const Template = () => {
               color: getColor(state, 0),
             }}
             dangerouslySetInnerHTML={{
-              __html: formatEmojis(
-                state.slides[state.currentSlide].data.location.content.replace(
-                  /\n/gi,
-                  `<br/>`
-                )
-              ),
+              __html: formatEmojis(location.content.replace(/\n/gi, `<br/>`)),
             }}
           />
           <span
@@ -81,12 +66,7 @@ const Template = () => {
               color: getColor(state, 0),
             }}
             dangerouslySetInnerHTML={{
-              __html: formatEmojis(
-                state.slides[state.currentSlide].data.date.content.replace(
-                  /\n/gi,
-                  `<br/>`
-                )
-              ),
+              __html: formatEmojis(date.content.replace(/\n/gi, `<br/>`)),
             }}
           />
           <div className="absolute right-0 bottom-0 mb-4 mr-4 z-20">
@@ -100,12 +80,9 @@ const Template = () => {
                 }}
                 dangerouslySetInnerHTML={{
                   __html:
-                    state.slides[0].data.localBranch.content === ""
+                    localBranch.content === ""
                       ? "\u00a0"
-                      : state.slides[0].data.localBranch.content.replace(
-                          /\n/gi,
-                          `<br/>`
-                        ),
+                      : localBranch.content.replace(/\n/gi, `<br/>`),
                 }}
               />
             </div>

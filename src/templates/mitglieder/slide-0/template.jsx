@@ -7,6 +7,10 @@ import TemplateWrapper from "../../../components/templateWrapper";
 
 const Template = ({ thumbnail = false }) => {
   const { state } = useDataContext();
+  const {
+    data: { image, statement },
+  } = state.slides[0];
+
   return (
     <TemplateWrapper isThumbnail={thumbnail}>
       <div className="p-4 flex flex-col items-center h-full justify-end">
@@ -17,15 +21,15 @@ const Template = ({ thumbnail = false }) => {
           className="absolute // top-0 left-0 right-0 // z-10 // w-full h-full"
           style={{
             backgroundImage: `url(${
-              state.slides[0].data.image.url !== null
-                ? state.slides[0].data.image.url
+              image.url !== null
+                ? image.url
                 : "/assets/images/defaultImages/mitglieder-0.jpg"
             })`,
             height: "100%",
             filter: "grayscale(100%)",
-            backgroundPositionX: `${state.slides[0].data.image.position.x}px`,
-            backgroundPositionY: `${state.slides[0].data.image.position.y}px`,
-            backgroundSize: `${state.slides[0].data.image.scale * 10 + 100}%`,
+            backgroundPositionX: `${image.position.x}px`,
+            backgroundPositionY: `${image.position.y}px`,
+            backgroundSize: `${image.scale * 10 + 100}%`,
           }}
         />
         <div
@@ -40,10 +44,7 @@ const Template = ({ thumbnail = false }) => {
               color: getColor(state, 1),
             }}
             dangerouslySetInnerHTML={{
-              __html:
-                state.slides[0].data.statement.content === ""
-                  ? "\u00a0"
-                  : state.slides[0].data.statement.content,
+              __html: statement.content === "" ? "\u00a0" : statement.content,
             }}
           />
           <div

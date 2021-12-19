@@ -6,27 +6,28 @@ import useDataContext from "../../../lib/useDataContext";
 
 const Template = ({ thumbnail = false }) => {
   const { state } = useDataContext();
+  const {
+    data: { category, body },
+  } = state.slides[0];
+
   return (
     <TemplateWrapper isThumbnail={thumbnail} bgColor="#fff">
       <div className="p-4 flex flex-col">
         <span
           className="mb-3 text-center text-xl font-bold font-headline uppercase"
           dangerouslySetInnerHTML={{
-            __html:
-              state.slides[0].data.category.content === ""
-                ? "\u00a0"
-                : state.slides[0].data.category.content,
+            __html: category.content === "" ? "\u00a0" : category.content,
           }}
         />
         <div className="flex-1 flex">
           <span
             className="block // w-full // self-center // text-left text-black font-bold italic font-headline leading-none"
             style={{
-              fontSize: `${state.slides[0].data.body.scale.value}px`,
+              fontSize: `${body.scale.value}px`,
             }}
             dangerouslySetInnerHTML={{
               __html: formatEmojis(
-                state.slides[0].data.body.content
+                body.content
                   .replace(
                     /\{/gi,
                     `<div class="stripeContainer"><div class="stripeText">`

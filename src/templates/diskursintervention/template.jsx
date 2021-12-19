@@ -7,16 +7,17 @@ import TemplateWrapper from "../../components/templateWrapper";
 
 const Template = () => {
   const { state } = useDataContext();
+  const { currentSlide } = state;
+  const {
+    data: { category, body, localBranch },
+  } = state.slides[currentSlide];
 
   return (
     <TemplateWrapper className="p-4">
       <span
         className="mb-3 text-center text-xl font-bold font-headline italic"
         dangerouslySetInnerHTML={{
-          __html:
-            state.slides[state.currentSlide].data.category.content === ""
-              ? "\u00a0"
-              : state.slides[state.currentSlide].data.category.content,
+          __html: category.content === "" ? "\u00a0" : category.content,
         }}
         style={{
           color: getColor(state, 1),
@@ -26,14 +27,12 @@ const Template = () => {
         <span
           className="block // w-full // self-center // text-center break-all font-bold font-headline leading-none"
           style={{
-            fontSize: `${
-              state.slides[state.currentSlide].data.body.scale.value
-            }px`,
+            fontSize: `${body.scale.value}px`,
             color: getColor(state, 1),
           }}
           dangerouslySetInnerHTML={{
             __html: formatEmojis(
-              state.slides[state.currentSlide].data.body.content
+              body.content
                 .replace(
                   /\{/gi,
                   `<div class="stripeContainer"><div class="stripeText" style="color: ${getColor(
@@ -61,7 +60,7 @@ const Template = () => {
         }}
         dangerouslySetInnerHTML={{
           __html:
-            state.slides[state.currentSlide].data.localBranch.content === ""
+            localBranch.content === ""
               ? "\u00a0"
               : state.slides[
                   state.currentSlide

@@ -7,6 +7,10 @@ import TemplateWrapper from "../../../components/templateWrapper";
 
 const Template = ({ thumbnail = false }) => {
   const { state } = useDataContext();
+  const {
+    data: { body, localBranch },
+  } = state.slides[2];
+
   return (
     <TemplateWrapper isThumbnail={thumbnail} colorThemeColorOrder={1}>
       <div className="p-4 flex flex-col h-full">
@@ -14,10 +18,10 @@ const Template = ({ thumbnail = false }) => {
           className="flex-1 text-left font-headline uppercase italic leading-tight break-word overflow-hidden"
           style={{
             color: getColor(state, 0),
-            fontSize: `${state.slides[2].data.body.scale.value}px`,
+            fontSize: `${body.scale.value}px`,
           }}
           dangerouslySetInnerHTML={{
-            __html: state.slides[2].data.body.content.replace(/\n/gi, `<br />`),
+            __html: body.content.replace(/\n/gi, `<br />`),
           }}
         />
         <div className="flex flex-col justify-center w-full">
@@ -32,12 +36,9 @@ const Template = ({ thumbnail = false }) => {
             }}
             dangerouslySetInnerHTML={{
               __html:
-                state.slides[2].data.localBranch.content === ""
+                localBranch.content === ""
                   ? "\u00a0"
-                  : state.slides[2].data.localBranch.content.replace(
-                      /\n/gi,
-                      `<br />`
-                    ),
+                  : localBranch.content.replace(/\n/gi, `<br />`),
             }}
           />
         </div>
