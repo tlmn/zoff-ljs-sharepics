@@ -26,7 +26,7 @@ const Template = () => {
             }}
           />
           <span
-            className="block // w-full // self-center // text-left font-bold font-headline leading-none"
+            className="block w-full self-center text-left font-bold font-headline leading-none"
             style={{
               fontSize: `${event.scale.value}px`,
               color: getColor(state, 1),
@@ -36,7 +36,7 @@ const Template = () => {
             }}
           />
           <div
-            className="mt-3 flex-1 text-left // font-headline text-lg font-bold uppercase break-word overflow-hidden"
+            className="mt-3 flex-1 text-left font-headline text-lg font-bold uppercase break-word overflow-hidden"
             dangerouslySetInnerHTML={{
               __html: speaker.content === "" ? "\u00a0" : speaker.content,
             }}
@@ -52,7 +52,7 @@ const Template = () => {
         />
         <div className="flex flex-col p-4 relative">
           <span
-            className="w-full z-20 // text-left text-lg font-bold font-headline uppercase leading-normal break-word overflow-hidden"
+            className="w-full z-20 text-left text-lg font-bold font-headline uppercase leading-normal break-word overflow-hidden"
             style={{
               color: getColor(state, 0),
             }}
@@ -61,7 +61,7 @@ const Template = () => {
             }}
           />
           <span
-            className="w-full z-20 // text-left text-lg font-bold font-headline uppercase leading-normal"
+            className="w-full z-20 text-left text-lg font-bold font-headline uppercase leading-normal"
             style={{
               color: getColor(state, 0),
             }}

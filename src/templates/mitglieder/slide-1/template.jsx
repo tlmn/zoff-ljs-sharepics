@@ -24,7 +24,7 @@ const Template = ({ thumbnail = false }) => {
           }}
         />
         <span
-          className="flex-1 mt-3 // font-headline italic uppercase text-lg text-left"
+          className="flex-1 mt-3 font-headline italic uppercase text-lg text-left"
           style={{ color: getColor(state, 1) }}
           dangerouslySetInnerHTML={{
             __html: author.content,

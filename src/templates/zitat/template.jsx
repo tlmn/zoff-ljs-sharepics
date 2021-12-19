@@ -14,7 +14,7 @@ const Template = () => {
     <TemplateWrapper className="p-4">
       <div className="flex">
         <span
-          className="block // w-full // self-center // text-left italic font-bold font-headline leading-none break-word overflow-hidden"
+          className="block w-full self-center text-left italic font-bold font-headline leading-none break-word overflow-hidden"
           style={{
             fontSize: `${body.scale.value}px`,
             color: getColor(state, 1),
@@ -25,7 +25,7 @@ const Template = () => {
         />
       </div>
       <div
-        className="mt-3 flex-1 text-left // font-headline text-lg italic font-bold uppercase break-word overflow-hidden"
+        className="mt-3 flex-1 text-left font-headline text-lg italic font-bold uppercase break-word overflow-hidden"
         dangerouslySetInnerHTML={{
           __html: author.content === "" ? "\u00a0" : author.content,
         }}

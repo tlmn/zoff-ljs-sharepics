@@ -27,7 +27,7 @@ const Template = () => {
         }}
       />
       <div
-        className="absolute // top-0 left-0 right-0 // z-10 // w-full h-full"
+        className="absolute top-0 left-0 right-0 z-10 w-full h-full"
         style={{
           backgroundImage: `url(${
             image.url !== null
@@ -41,7 +41,7 @@ const Template = () => {
           backgroundSize: `${image.scale * 10 + 100}%`,
         }}
       />
-      <div className="p-4 // relative // h-full w-full // flex flex-col break-all  // border-1 // z-20 ">
+      <div className="p-4 relative h-full w-full flex flex-col break-all  border-1 z-20 ">
         <div className="flex-1 flex">
           <div
             className={`h-full w-full flex items-${body.textPosition} justify-start`}
@@ -51,7 +51,7 @@ const Template = () => {
               style={{ transform: "rotate(-6deg)" }}
             >
               <span
-                className="self-center // text-center font-bold italic font-headline leading-none // stripeText"
+                className="self-center text-center font-bold italic font-headline leading-none stripeText"
                 style={{
                   fontSize: `${body.scale.value}px`,
                   color: getColor(state, 1),

@@ -21,7 +21,7 @@ const Template = ({ thumbnail = false }) => {
         />
         <div className="flex-1 flex">
           <span
-            className="block // w-full // self-center // text-left text-black font-bold italic font-headline leading-none"
+            className="block w-full self-center text-left text-black font-bold italic font-headline leading-none"
             style={{
               fontSize: `${body.scale.value}px`,
             }}

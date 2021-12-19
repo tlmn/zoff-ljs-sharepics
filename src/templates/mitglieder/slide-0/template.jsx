@@ -18,7 +18,7 @@ const Template = ({ thumbnail = false }) => {
           <DraggableBg propertyPath="slides[0].data.image.position" />
         )}
         <div
-          className="absolute // top-0 left-0 right-0 // z-10 // w-full h-full"
+          className="absolute top-0 left-0 right-0 z-10 w-full h-full"
           style={{
             backgroundImage: `url(${
               image.url !== null

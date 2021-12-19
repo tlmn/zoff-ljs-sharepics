@@ -18,7 +18,7 @@ const Template = ({ thumbnail = false }) => {
       <div className="stripeContainer">
         <div className="stripeText" style={{ color: getColor(state, 0) }}>
           <div
-            className="text-left // font-headline italic font-bold"
+            className="text-left font-headline italic font-bold"
             dangerouslySetInnerHTML={{
               __html:
                 body.content === "" ? "\u00a0" : formatEmojis(body.content),

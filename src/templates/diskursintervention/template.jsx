@@ -25,7 +25,7 @@ const Template = () => {
       />
       <div className="mb-3 flex-1 flex">
         <span
-          className="block // w-full // self-center // text-center break-all font-bold font-headline leading-none"
+          className="block w-full self-center text-center break-all font-bold font-headline leading-none"
           style={{
             fontSize: `${body.scale.value}px`,
             color: getColor(state, 1),
