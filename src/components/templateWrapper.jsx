@@ -12,22 +12,22 @@ const TemplateWrapper = ({
   bgColor = "#fff",
 }) => {
   const {
-    state: { currentSlide, scaleFactor, templateScale, colorTheme },
+    state: { ref, scaleFactor, templateScale, colorTheme },
     state,
     setState,
   } = useDataContext();
-  const ref = useRef(null);
+  const templateRef = useRef(null);
   const { width } = useWindowResize();
 
   useEffect(() => {
     setState((prev) => ({
       ...prev,
-      scaleFactor: ref?.current?.clientWidth / 1080,
+      scaleFactor: templateRef?.current?.clientWidth / 1080,
     }));
-  }, [ref, width, setState]);
+  }, [templateRef, width, setState]);
 
   return (
-    <div className="relative" ref={ref}>
+    <div className="relative" ref={templateRef}>
       <div
         className={clsx(
           "flex flex-col absolute border-1 template origin-top-left",
@@ -43,7 +43,7 @@ const TemplateWrapper = ({
           transform:
             templateScale && !isThumbnail ? `scale(${scaleFactor})` : ``,
         }}
-        ref={!isThumbnail ? state.slides[currentSlide].ref : null}
+        ref={!isThumbnail ? ref : null}
       >
         {children}
       </div>
