@@ -62,9 +62,7 @@ const Template = () => {
           __html:
             localGroup.content === ""
               ? "\u00a0"
-              : state.slides[
-                  state.currentSlide
-                ].data.localGroup.content.replace(/\n/gi, `<br/>`),
+              : localGroup.content.replace(/\n/gi, `<br/>`),
         }}
       />
     </TemplateWrapper>

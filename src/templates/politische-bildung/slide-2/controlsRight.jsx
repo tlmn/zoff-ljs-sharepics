@@ -20,7 +20,6 @@ const ControlsRight = () => {
         label="Lokalgruppe (optional)"
         propertyPath={`slides[${currentSlide}].data.localGroup.content`}
         rows={2}
-        cols={30}
       />
 
       <DownloadButton

@@ -32,7 +32,6 @@ const ControlsMobile = () => {
             label="Lokalgruppe (optional)"
             propertyPath={`slides[${currentSlide}].data.localGroup.content`}
             rows={2}
-            cols={30}
           />
         </FieldSet>
       </div>

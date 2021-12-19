@@ -25,7 +25,7 @@ const ControlsRight = () => {
       <Textarea
         label="Lokalgruppe (optional)"
         propertyPath={`slides[${currentSlide}].data.localGroup.content`}
-        rows={3}
+        rows={2}
       />
 
       <DownloadButton
