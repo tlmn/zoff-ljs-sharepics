@@ -15,8 +15,8 @@ const Template = ({ thumbnail = false }) => {
       isThumbnail={thumbnail}
       className="p-4 flex justify-center items-center"
     >
-      <div class="stripeContainer">
-        <div class="stripeText" style={{ color: getColor(state, 0) }}>
+      <div className="stripeContainer">
+        <div className="stripeText" style={{ color: getColor(state, 0) }}>
           <div
             className="text-left // font-headline italic font-bold"
             dangerouslySetInnerHTML={{
@@ -31,7 +31,7 @@ const Template = ({ thumbnail = false }) => {
           />
         </div>
         <div
-          class="stripeElement"
+          className="stripeElement"
           style={{
             transform: "rotate(-6deg)",
             backgroundColor: getColor(state, 1),
