@@ -10,7 +10,7 @@ const Template = () => {
   const { state } = useDataContext();
   const { currentSlide } = state;
   const {
-    data: { ref, image, body, localGroup },
+    data: { image, body, localGroup },
   } = state.slides[currentSlide];
 
   return (
