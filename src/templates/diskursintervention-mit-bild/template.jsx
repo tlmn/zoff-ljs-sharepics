@@ -10,7 +10,7 @@ const Template = () => {
   const { state } = useDataContext();
   const { currentSlide } = state;
   const {
-    data: { ref, image, body, localBranch },
+    data: { ref, image, body, localGroup },
   } = state.slides[currentSlide];
 
   return (
@@ -83,9 +83,9 @@ const Template = () => {
               }}
               dangerouslySetInnerHTML={{
                 __html:
-                  localBranch.content === ""
+                  localGroup.content === ""
                     ? "\u00a0"
-                    : localBranch.content.replace(/\n/gi, `<br/>`),
+                    : localGroup.content.replace(/\n/gi, `<br/>`),
               }}
             />
           </div>

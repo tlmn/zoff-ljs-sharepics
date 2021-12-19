@@ -19,7 +19,7 @@ const PageDiskursintervention = () => {
             content: "Das Problem heißt {Rassismus!}",
             scale: { value: 100, range: [60, 150] },
           },
-          localBranch: { content: "" },
+          localGroup: { content: "" },
         },
         ref: useRef(null),
       },

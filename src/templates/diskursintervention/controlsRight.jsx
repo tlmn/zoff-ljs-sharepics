@@ -20,13 +20,11 @@ const ControlsRight = () => {
         cols={30}
       />
 
-      <TextScale
-        propertyPath={`slides[${currentSlide}].data.body.scale`}
-      />
+      <TextScale propertyPath={`slides[${currentSlide}].data.body.scale`} />
 
       <Textarea
         label="Lokalgruppe (optional)"
-        propertyPath={`slides[${currentSlide}].data.localBranch.content`}
+        propertyPath={`slides[${currentSlide}].data.localGroup.content`}
         rows={3}
       />
 

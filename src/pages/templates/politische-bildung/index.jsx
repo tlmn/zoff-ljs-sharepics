@@ -42,7 +42,7 @@ const PagePolitischeBildung = () => {
               "Die Ereignisse rund um den 4. November gehen als Kieler Matrosenaufstand in die Geschichte ein und bilden den Auftakt zur November Revolution.",
             scale: { value: 40, range: [30, 60] },
           },
-          localBranch: { content: "" },
+          localGroup: { content: "" },
         },
         ref: useRef(null),
       },

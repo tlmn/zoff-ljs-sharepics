@@ -26,10 +26,10 @@ const ControlsMobile = () => {
           <TextScale propertyPath={`slides[${currentSlide}].data.body.scale`} />
         </FieldSet>
 
-        <FieldSet name={`slides[${currentSlide}].data.localBranch`}>
+        <FieldSet name={`slides[${currentSlide}].data.localGroup`}>
           <Textarea
             label="Lokalgruppe (optional)"
-            propertyPath={`slides[${currentSlide}].data.localBranch.content`}
+            propertyPath={`slides[${currentSlide}].data.localGroup.content`}
             rows={2}
             cols={30}
           />
@@ -52,7 +52,7 @@ const ControlsMobile = () => {
         <MenuItem
           legend={`Lokal&shy;gruppe`}
           iconType={`localGroup`}
-          targetFieldset={`slides[${currentSlide}].data.localBranch`}
+          targetFieldset={`slides[${currentSlide}].data.localGroup`}
         />
       </MobileInputMenu>
     </div>

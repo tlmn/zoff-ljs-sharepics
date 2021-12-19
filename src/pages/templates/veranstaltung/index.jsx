@@ -22,7 +22,7 @@ const PageVeranstaltung = () => {
           speaker: { content: "Veronika Kracher" },
           location: { content: "Ort" },
           date: { content: "Datum" },
-          localBranch: { content: "" },
+          localGroup: { content: "" },
         },
         ref: useRef(null),
       },

@@ -20,7 +20,7 @@ const PageDiskursinterventionMitBild = () => {
             scale: { value: 100, range: [60, 150] },
             textPosition: "end",
           },
-          localBranch: { content: "" },
+          localGroup: { content: "" },
         },
         ref: useRef(null),
       },

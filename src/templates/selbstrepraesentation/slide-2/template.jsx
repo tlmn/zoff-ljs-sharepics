@@ -8,7 +8,7 @@ import TemplateWrapper from "../../../components/templateWrapper";
 const Template = ({ thumbnail = false }) => {
   const { state } = useDataContext();
   const {
-    data: { body, localBranch },
+    data: { body, localGroup },
   } = state.slides[2];
 
   return (
@@ -41,9 +41,9 @@ const Template = ({ thumbnail = false }) => {
           }}
           dangerouslySetInnerHTML={{
             __html:
-              localBranch.content === ""
+              localGroup.content === ""
                 ? "\u00a0"
-                : localBranch.content.replace(/\n/gi, `<br/>`),
+                : localGroup.content.replace(/\n/gi, `<br/>`),
           }}
         />
       </div>

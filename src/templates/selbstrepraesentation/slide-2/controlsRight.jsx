@@ -13,14 +13,12 @@ const ControlsRight = () => {
         propertyPath={`slides[${currentSlide}].data.body.content`}
       />
 
-      <TextScale
-        propertyPath={`slides[${currentSlide}].data.body.scale`}
-      />
+      <TextScale propertyPath={`slides[${currentSlide}].data.body.scale`} />
 
       <Textarea
         rows={2}
         label="Lokalgruppe (optional)"
-        propertyPath={`slides[${currentSlide}].data.localBranch.content`}
+        propertyPath={`slides[${currentSlide}].data.localGroup.content`}
       />
 
       <DownloadButton

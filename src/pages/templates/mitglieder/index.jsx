@@ -39,7 +39,7 @@ const PageMitglieder = () => {
             content: "Man muss doch alles selber machen!",
             scale: { value: 100, range: [60, 150] },
           },
-          localBranch: { content: "" },
+          localGroup: { content: "" },
         },
         ref: useRef(null),
       },

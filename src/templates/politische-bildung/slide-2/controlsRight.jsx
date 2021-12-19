@@ -18,7 +18,7 @@ const ControlsRight = () => {
 
       <Textarea
         label="Lokalgruppe (optional)"
-        propertyPath={`slides[${currentSlide}].data.localBranch.content`}
+        propertyPath={`slides[${currentSlide}].data.localGroup.content`}
         rows={2}
         cols={30}
       />

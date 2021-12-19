@@ -36,7 +36,7 @@ const PageSelbstrepraesentation = () => {
               "Eine vom Patriarchat befreite Gesellschaft? Viele sprechen davon aber wenige setzen es in die Praxis um.",
             scale: { value: 80, range: [40, 120] },
           },
-          localBranch: { content: "" },
+          localGroup: { content: "" },
         },
         ref: useRef(null),
       },
