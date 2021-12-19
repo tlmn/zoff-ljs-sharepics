@@ -9,6 +9,7 @@ const ThumbnailButton = ({ children, currentSlide }) => {
         setState((prev) => ({ ...prev, currentSlide: currentSlide }))
       }
       className="is-thumbnail hover:opacity-75"
+      key={currentSlide}
     >
       {children}
     </button>
