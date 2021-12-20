@@ -4,15 +4,19 @@ import React from "react";
 import ToMenuIcon from "../assets/svg/inputIcons/toMenu";
 import useDataContext from "../lib/useDataContext";
 import clsx from "clsx";
-import Div100vh from "react-div-100vh";
 
 const TemplateLayout = ({ children }) => {
   const {
     state: { templateScale },
   } = useDataContext();
+
   return (
     <Layout>
-      <Div100vh>
+      <div
+        style={{
+          minHeight: typeof window !== "undefined" ? window.innerHeight : 0,
+        }}
+      >
         <div
           className={clsx(
             !templateScale
@@ -31,7 +35,7 @@ const TemplateLayout = ({ children }) => {
           </div>
           {children}
         </div>
-      </Div100vh>
+      </div>
     </Layout>
   );
 };
