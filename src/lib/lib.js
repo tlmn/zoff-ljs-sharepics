@@ -51,3 +51,17 @@ export const updateProperty = ({ setState }, path, newValue) => {
 export const getProperty = ({ state }, path) => {
   return get(state, path);
 };
+
+export const getScrollRight = (ref) => {
+  return (
+    ref?.current?.scrollWidth -
+    (ref?.current?.clientWidth + ref?.current?.scrollLeft)
+  );
+};
+
+export const getScrollLeft = (ref) => {
+  return ref?.current?.scrollLeft;
+};
+
+export const mapToRange = (value, x1, y1, x2, y2) =>
+  ((value - x1) * (y2 - x2)) / (y1 - x1) + x2;
