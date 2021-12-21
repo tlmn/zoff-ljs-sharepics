@@ -1,11 +1,17 @@
 import Layout from "../components/layout";
 import { Link } from "gatsby";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ToMenuIcon from "../assets/svg/inputIcons/toMenu";
 import useDataContext from "../lib/useDataContext";
 import clsx from "clsx";
 
 const TemplateLayout = ({ children }) => {
+  const [windowHeight, setWindowHeight] = useState(0);
+
+  useEffect(() => {
+    typeof window !== "undefined" && setWindowHeight(window?.innerHeight);
+  }, []);
+
   const {
     state: { templateScale },
   } = useDataContext();
@@ -14,7 +20,7 @@ const TemplateLayout = ({ children }) => {
     <Layout>
       <div
         style={{
-          minHeight: typeof window !== "undefined" ? window.innerHeight : 0,
+          minHeight: windowHeight,
         }}
       >
         <div
