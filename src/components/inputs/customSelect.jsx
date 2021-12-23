@@ -12,9 +12,7 @@ const CustomSelect = ({ availableValues, propertyPath, label, ...props }) => {
       <select
         type="text"
         value={getProperty({ state }, propertyPath)}
-        onChange={(e) =>
-          updateProperty({ setState }, propertyPath, e.target.value)
-        }
+        onChange={(e) => updateProperty(setState, propertyPath, e.target.value)}
         id={propertyPath}
         {...props}
       >

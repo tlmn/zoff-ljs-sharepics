@@ -12,7 +12,7 @@ const Textarea = ({ propertyPath, label, ...props }) => {
       <div className="relative">
         <textarea
           onChange={(e) =>
-            updateProperty({ setState }, propertyPath, e.target.value)
+            updateProperty(setState, propertyPath, e.target.value)
           }
           id={propertyPath}
           {...props}
@@ -20,7 +20,7 @@ const Textarea = ({ propertyPath, label, ...props }) => {
         />
         <button
           className="absolute bottom-1 right-1 fill-lightGray hover:fill-green"
-          onClick={() => updateProperty({ setState }, propertyPath, "")}
+          onClick={() => updateProperty(setState, propertyPath, "")}
         >
           <EraseIcon />
         </button>

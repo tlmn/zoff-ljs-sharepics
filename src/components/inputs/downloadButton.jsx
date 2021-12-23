@@ -14,13 +14,7 @@ const DownloadButton = ({
     <button
       className={clsx("btn btn-download", className)}
       onClick={() =>
-        html2image(
-          {
-            state,
-            setState,
-          },
-          getProperty({ state }, fileNamePath)
-        )
+        html2image(state, setState, getProperty({ state }, fileNamePath))
       }
     >
       {buttonText}

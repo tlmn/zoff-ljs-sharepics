@@ -15,14 +15,14 @@ const Input = ({ propertyPath, label, ...props }) => {
           className="pr-5"
           value={getProperty({ state }, propertyPath)}
           onChange={(e) =>
-            updateProperty({ setState }, propertyPath, e.target.value)
+            updateProperty(setState, propertyPath, e.target.value)
           }
           id={propertyPath}
           {...props}
         />
         <button
           className="absolute top-0 bottom-0 my-auto right-1 fill-lightGray hover:fill-green"
-          onClick={() => updateProperty({ setState }, propertyPath, "")}
+          onClick={() => updateProperty(setState, propertyPath, "")}
         >
           <EraseIcon />
         </button>
