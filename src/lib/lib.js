@@ -2,17 +2,17 @@ import { cloneDeepWith, get, set } from "lodash";
 import { colorThemes, colors } from "../config/vars";
 
 import emojiRegex from "emoji-regex";
-import { toJpeg } from "html-to-image";
+import { toBlob } from "html-to-image";
 import { saveAs } from "file-saver";
 import slugify from "react-slugify";
 
 export const html2image = async ({ state, setState }, fileName = "ljs") => {
   setState((prev) => ({ ...prev, templateScale: false }));
-  toJpeg(state.slides[state.currentSlide].ref.current, {
-    quality: 1,
+  toBlob(state.slides[state.currentSlide].ref.current, {
+    quality: 0.8,
     canvasWidth: 1080,
     canvasHeight: 1080,
-  }).then(function (blob) {
+  }).then((blob) => {
     saveAs(blob, `sharepic-${slugify(fileName)}`);
     setState((prev) => ({ ...prev, templateScale: true }));
   });
