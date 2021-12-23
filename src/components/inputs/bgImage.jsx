@@ -1,4 +1,4 @@
-import React, {  useRef } from "react";
+import React, { useRef } from "react";
 
 import IconReset from "../../assets/svg/reset";
 import { updateProperty } from "../../lib/lib";
@@ -17,7 +17,7 @@ const BGImage = ({ currentSlide }) => {
         onChange={(e) =>
           e.target.files[0] !== null &&
           updateProperty(
-            { setState },
+            setState,
             `slides[${currentSlide}].data.image.url`,
             URL.createObjectURL(e.target.files[0])
           )
