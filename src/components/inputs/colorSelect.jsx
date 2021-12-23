@@ -6,31 +6,32 @@ import { primaryColors } from "../../config/vars";
 const ColorSelect = () => {
   const { state, setState } = useDataContext();
 
+  const { primaryColor: currentPrimaryColor } = state;
+
   return (
     <>
       <div className="uppercase font-headline italic text-black md:text-white">
         Corporate Design
       </div>
       <div className="grid-cols-2 grid">
-        {primaryColors.map((primaryColor) => (
+        {primaryColors.map(({ label, name }) => (
           <div className="col-span-1">
             <input
               type="radio"
-              value={primaryColor.label}
+              value={label}
               name="primaryColor"
-              id={primaryColor.name}
-              onChange={(e) => {
-                let value = e.target.value;
+              id={name}
+              onChange={({ target: { value } }) => {
                 setState((prev) => ({ ...prev, primaryColor: value }));
               }}
             />
-            <label htmlFor={primaryColor.name} className="label__radio">
+            <label htmlFor={name} className="label__radio">
               <div className="px-2">
                 <img
-                  alt={`Farbschema Vorschau für ${primaryColor.name}`}
-                  src={`/assets/images/colorThemes/${primaryColor.label}.png`}
+                  alt={`Farbschema Vorschau für ${name}`}
+                  src={`/assets/images/colorThemes/${label}.png`}
                   className={`colorThumbnail ${
-                    state.primaryColor === primaryColor.label && `border-white`
+                    currentPrimaryColor === label && `border-white`
                   }`}
                 />
               </div>

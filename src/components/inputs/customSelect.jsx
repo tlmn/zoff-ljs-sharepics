@@ -11,14 +11,16 @@ const CustomSelect = ({ availableValues, propertyPath, label, ...props }) => {
       <label htmlFor={propertyPath}>{label}</label>
       <select
         type="text"
-        value={getProperty({ state }, propertyPath)}
-        onChange={(e) => updateProperty(setState, propertyPath, e.target.value)}
+        value={getProperty(state, propertyPath)}
+        onChange={({ target: { value } }) =>
+          updateProperty(setState, propertyPath, value)
+        }
         id={propertyPath}
         {...props}
       >
-        {availableValues.map((item) => (
-          <option value={item.value} key={item.value}>
-            {item.label}
+        {availableValues.map(({ label, value }) => (
+          <option value={value} key={value}>
+            {label}
           </option>
         ))}
       </select>

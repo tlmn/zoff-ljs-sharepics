@@ -4,8 +4,13 @@ import IconReset from "../../assets/svg/reset";
 import { updateProperty } from "../../lib/lib";
 import useDataContext from "../../lib/useDataContext";
 
-const BGImage = ({ currentSlide }) => {
+const BGImage = () => {
   const { state, setState } = useDataContext();
+  const { currentSlide } = state;
+  const {
+    data: { image },
+  } = state.slides[currentSlide];
+
   const inputFileRef = useRef(null);
   return (
     <>
@@ -14,12 +19,12 @@ const BGImage = ({ currentSlide }) => {
         type="file"
         id="bgImage__fileName"
         name="file"
-        onChange={(e) =>
-          e.target.files[0] !== null &&
+        onChange={({ target: { files } }) =>
+          files[0] !== null &&
           updateProperty(
             setState,
             `slides[${currentSlide}].data.image.url`,
-            URL.createObjectURL(e.target.files[0])
+            URL.createObjectURL(files[0])
           )
         }
         ref={inputFileRef}
@@ -40,13 +45,14 @@ const BGImage = ({ currentSlide }) => {
         id="bgImage__scale"
         name="imageScale"
         min="0"
-        defaultValue={state.slides[currentSlide].data.image.scale}
+        defaultValue={image.scale}
         max="30"
-        onChange={(e) =>
+        onChange={({ target: { value } }) =>
           updateProperty(
-            { state, setState },
+            state,
+            setState,
             `slides[${currentSlide}].data.image.scale`,
-            e.target.value
+            value
           )
         }
       />
@@ -55,7 +61,8 @@ const BGImage = ({ currentSlide }) => {
         className="btn flex justify-center mb-2"
         onClick={() =>
           updateProperty(
-            { state, setState },
+            state,
+            setState,
             `slides[${currentSlide}].data.image.position`,
             { x: 0, y: 0 }
           )

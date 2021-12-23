@@ -9,16 +9,16 @@ const DraggableBG = ({ propertyPath }) => {
   const refDraggable = useRef(null);
   return (
     <Draggable
-      onStart={(e, data) => {
+      onStart={(e, { x, y }) => {
         updateProperty(setState, propertyPath, {
-          x: data.x,
-          y: data.y,
+          x,
+          y,
         });
       }}
-      onDrag={(e, data) => {
+      onDrag={(e, { x, y }) => {
         updateProperty(setState, propertyPath, {
-          x: data.x,
-          y: data.y,
+          x,
+          y,
         });
       }}
       onStop={() => {

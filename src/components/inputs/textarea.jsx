@@ -11,12 +11,12 @@ const Textarea = ({ propertyPath, label, ...props }) => {
       <label htmlFor={propertyPath}>{label}</label>
       <div className="relative">
         <textarea
-          onChange={(e) =>
-            updateProperty(setState, propertyPath, e.target.value)
+          onChange={({ target: { value } }) =>
+            updateProperty(setState, propertyPath, value)
           }
           id={propertyPath}
           {...props}
-          value={getProperty({ state }, propertyPath)}
+          value={getProperty(state, propertyPath)}
         />
         <button
           className="absolute bottom-1 right-1 fill-lightGray hover:fill-green"

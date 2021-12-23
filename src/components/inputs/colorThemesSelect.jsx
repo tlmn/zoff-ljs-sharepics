@@ -28,8 +28,7 @@ const ColorThemesSelect = () => {
                 colorThemes.filter((theme) => theme.label === colorTheme)[0]
                   .name
               }
-              onChange={(e) => {
-                let value = e.target.value;
+              onChange={({ target: { value } }) => {
                 setState((prev) => ({ ...prev, colorTheme: value }));
               }}
             />
@@ -79,8 +78,7 @@ const ColorThemesSelect = () => {
                 colorThemes.filter((theme) => theme.label === colorTheme)[0]
                   .name
               }
-              onChange={(e) => {
-                let value = e.target.value;
+              onChange={({ target: { value } }) => {
                 setState((prev) => ({ ...prev, colorTheme: value }));
               }}
             />

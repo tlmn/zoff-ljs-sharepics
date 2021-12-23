@@ -13,9 +13,9 @@ const Input = ({ propertyPath, label, ...props }) => {
         <input
           type="text"
           className="pr-5"
-          value={getProperty({ state }, propertyPath)}
-          onChange={(e) =>
-            updateProperty(setState, propertyPath, e.target.value)
+          value={getProperty(state, propertyPath)}
+          onChange={({ target: { value } }) =>
+            updateProperty(setState, propertyPath, value)
           }
           id={propertyPath}
           {...props}
