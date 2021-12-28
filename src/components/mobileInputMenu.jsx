@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import DownloadButton from "../components/inputs/downloadButton";
 import ArrowIcon from "../assets/svg/inputIcons/arrow";
 import { getScrollRight, mapToRange } from "../lib/lib";
@@ -7,6 +7,9 @@ const MobileInputMenu = ({ children }) => {
   const ref = useRef(null);
   const [scrollRight, setScrollRight] = useState(0);
 
+  useLayoutEffect(() => {
+    setScrollRight(getScrollRight(ref));
+  }, [ref]);
   return (
     <>
       <div className="bg-black flex justify-center relative">
