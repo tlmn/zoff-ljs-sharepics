@@ -102,9 +102,14 @@ export const templates = [
     thumbnailSrc: "../assets/images/templates/zitat.jpg",
   },
   {
-    name: "Pass the Mic",
-    link: "templates/pass-the-mic",
-    thumbnailSrc: "../assets/images/templates/pass-the-mic.jpg",
+    name: "Pass the Mic v1",
+    link: "templates/pass-the-mic-v1",
+    thumbnailSrc: "../assets/images/templates/pass-the-mic-v1.jpg",
+  },
+  {
+    name: "Pass the Mic v2",
+    link: "templates/pass-the-mic-v2",
+    thumbnailSrc: "../assets/images/templates/pass-the-mic-v2.png",
   },
   {
     name: "Veran&shy;staltung",
