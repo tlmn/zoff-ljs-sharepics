@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import DownloadButton from "../components/inputs/downloadButton";
 import { getScrollRight, mapToRange } from "../lib/lib";
 
