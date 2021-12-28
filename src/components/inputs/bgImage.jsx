@@ -61,7 +61,6 @@ const BGImage = () => {
         className="btn flex justify-center mb-2"
         onClick={() =>
           updateProperty(
-            state,
             setState,
             `slides[${currentSlide}].data.image.position`,
             { x: 0, y: 0 }
