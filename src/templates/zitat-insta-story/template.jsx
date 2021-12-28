@@ -8,12 +8,11 @@ import useDataContext from "../../lib/useDataContext";
 const Template = () => {
   const { state } = useDataContext();
   const {
-    data: { body, author },
-    isInstaStory,
+    data: { body, author, localGroup },
   } = state.slides[0];
 
   return (
-    <TemplateWrapper className="p-4" isInstaStory={isInstaStory}>
+    <TemplateWrapper className="p-4">
       <div className="flex">
         <span
           className="block w-full self-center text-left italic font-bold font-headline leading-none break-word overflow-hidden"
@@ -35,10 +34,24 @@ const Template = () => {
           color: getColor(state, 1),
         }}
       />
-      <LogoText
-        className="self-center mb-[12rem]"
-        fillColor={getColor(state, 1)}
-      />
+      <div className="flex flex-col justify-center w-full mb-[12rem]">
+        <div className="w-full flex justify-center">
+          <LogoText fillColor={getColor(state, 1)} />
+        </div>
+        <div
+          className="uppercase font-headline text-center text-md leading-none mt-2"
+          style={{
+            color: getColor(state, 1),
+            transform: "rotate(-6deg)",
+          }}
+          dangerouslySetInnerHTML={{
+            __html:
+              localGroup.content === ""
+                ? "\u00a0"
+                : localGroup.content.replace(/\n/gi, `<br/>`),
+          }}
+        />
+      </div>
     </TemplateWrapper>
   );
 };

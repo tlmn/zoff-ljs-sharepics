@@ -20,6 +20,7 @@ const PageZitatInsta = () => {
               "Eine vom Patriarchat befreite Gesellschaft? Viele sprechen davon aber wenige setzen es in die Praxis um.",
             scale: { value: 80, range: [50, 120] },
           },
+          localGroup: { content: "" },
         },
         ref: useRef(null),
       },

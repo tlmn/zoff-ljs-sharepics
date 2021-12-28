@@ -34,6 +34,13 @@ const ControlsMobile = () => {
             propertyPath={`slides[${currentSlide}].data.author.content`}
           />
         </FieldSet>
+
+        <FieldSet name={`slides[${currentSlide}].data.localGroup`}>
+          <Input
+            label="Lokalgruppe (optional)"
+            propertyPath={`slides[${currentSlide}].data.localGroup.content`}
+          />
+        </FieldSet>
       </div>
       <MobileInputMenu>
         <MenuItem
@@ -50,6 +57,11 @@ const ControlsMobile = () => {
           legend={`Autor:in`}
           iconType={`title`}
           targetFieldset={`slides[${currentSlide}].data.author`}
+        />
+        <MenuItem
+          legend={`Lokal&shy;gruppe`}
+          iconType={`localGroup`}
+          targetFieldset={`slides[${currentSlide}].data.localGroup`}
         />
       </MobileInputMenu>
     </div>
