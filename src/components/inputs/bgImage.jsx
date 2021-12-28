@@ -49,7 +49,6 @@ const BGImage = () => {
         max="30"
         onChange={({ target: { value } }) =>
           updateProperty(
-            state,
             setState,
             `slides[${currentSlide}].data.image.scale`,
             value
