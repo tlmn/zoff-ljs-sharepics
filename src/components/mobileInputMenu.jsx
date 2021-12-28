@@ -46,7 +46,7 @@ const MobileInputMenu = ({ children }) => {
             }}
           />
           <div
-            className="absolute top-0 bottom-0 max-w-min max-h-max right-[0.25rem] flex items-center rotate-180 shadow-sm"
+            className="absolute top-0 bottom-0 right-[0.25rem] flex items-center rotate-180 shadow-sm"
             style={{
               opacity: mapToRange(scrollRight, 40, 0, 0.7, 0),
             }}

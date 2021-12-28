@@ -51,7 +51,7 @@ const Template = () => {
           />
         </div>
         <div className="absolute w-full right-3 bottom-3 flex flex-col items-end">
-          <div className="w-1/2 aspect-square right-0">
+          <div className="w-[55%] aspect-square right-0">
             <DraggableBG propertyPath="slides[0].data.image.position" />
             <div
               className="w-full h-full"
