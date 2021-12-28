@@ -31,7 +31,7 @@ const MobileInputMenu = ({ children }) => {
             style={{
               width: "15px",
               background: "linear-gradient(to right, #000, rgba(0, 0, 0, 0))",
-              opacity: mapToRange(ref?.current?.scrollLeft, 0, 40, 0, 0.7),
+              opacity: mapToRange(ref?.current?.scrollLeft, 0, 40, 0, 1),
             }}
           />
 
