@@ -46,6 +46,7 @@ const PageMitglieder = () => {
     ],
     colorTheme: "red_violet",
     templateScale: true,
+    format: { width: 1080, height: 1080 },
   });
 
   return (

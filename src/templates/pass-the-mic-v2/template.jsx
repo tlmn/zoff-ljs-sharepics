@@ -62,7 +62,7 @@ const Template = () => {
                 backgroundImage: `url(${
                   image.url !== null
                     ? image.url
-                    : "/assets/images/defaultImages/mitglieder-0.jpg"
+                    : "/assets/images/defaultImages/pass-the-mic-v2.jpg"
                 })`,
                 height: "100%",
                 filter: "grayscale(100%)",

@@ -19,7 +19,7 @@ const PagePassTheMicv2 = () => {
             content:
               "{Erinnerung}\n{Gerechtigkeit}\n{Aufklärung}\n{Konsequenzen}",
             scale: { value: 100, range: [70, 120] },
-            textPosition: "start",
+            textPosition: "end",
           },
           image: { url: null, position: { x: 0, y: 0 }, scale: 0 },
           author: {
@@ -31,6 +31,7 @@ const PagePassTheMicv2 = () => {
     ],
     primaryColor: "violet",
     templateScale: true,
+    format: { width: 1080, height: 1080 },
   });
 
   return (

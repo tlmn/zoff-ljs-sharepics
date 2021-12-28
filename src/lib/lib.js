@@ -10,8 +10,8 @@ export const html2image = async (state, setState, fileName = "ljs") => {
   setState((prev) => ({ ...prev, templateScale: false }));
   toBlob(state.slides[state.currentSlide].ref.current, {
     quality: 0.8,
-    canvasWidth: 1080,
-    canvasHeight: 1080,
+    canvasWidth: state.format.width,
+    canvasHeight: state.format.height,
   }).then((blob) => {
     saveAs(blob, `sharepic-${slugify(fileName)}`);
     setState((prev) => ({ ...prev, templateScale: true }));

@@ -102,6 +102,11 @@ export const templates = [
     thumbnailSrc: "../assets/images/templates/zitat.jpg",
   },
   {
+    name: "Zitat Insta Story",
+    link: "templates/zitat-insta-story",
+    thumbnailSrc: "../assets/images/templates/zitat-insta-story.jpg",
+  },
+  {
     name: "Pass the Mic v1",
     link: "templates/pass-the-mic-v1",
     thumbnailSrc: "../assets/images/templates/pass-the-mic-v1.jpg",

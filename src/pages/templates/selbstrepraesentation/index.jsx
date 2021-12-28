@@ -43,6 +43,7 @@ const PageSelbstrepraesentation = () => {
     ],
     colorTheme: "darkGray_green",
     templateScale: true,
+    format: { width: 1080, height: 1080 },
   });
 
   return (

@@ -12,7 +12,7 @@ const TemplateWrapper = ({
   bgColor = "#fff",
 }) => {
   const {
-    state: { currentSlide, scaleFactor, templateScale, colorTheme },
+    state: { currentSlide, scaleFactor, templateScale, colorTheme, format },
     state,
     setState,
   } = useDataContext();
@@ -31,7 +31,7 @@ const TemplateWrapper = ({
     <div className="relative" ref={templateRef}>
       <div
         className={clsx(
-          "flex flex-col absolute border-1 template origin-top-left",
+          "flex flex-col absolute border-1 origin-top-left",
           templateScale ? "" : "relative",
           className
         )}
@@ -43,6 +43,8 @@ const TemplateWrapper = ({
           transformOrigin: "0 0",
           transform:
             templateScale && !isThumbnail ? `scale(${scaleFactor})` : ``,
+          width: format.width,
+          height: format.height,
         }}
         ref={!isThumbnail ? ref : null}
       >

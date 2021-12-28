@@ -27,6 +27,7 @@ const PageDiskursintervention = () => {
     colorTheme: "green_darkGray",
     templateScale: true,
     scaleFactor: 1,
+    format: { width: 1080, height: 1080 },
   });
 
   return (

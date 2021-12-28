@@ -1,13 +1,13 @@
 import React, { useRef, useState } from "react";
 
-import ControlsLeft from "../../../templates/zitat/controlsLeft";
-import ControlsRight from "../../../templates/zitat/controlsRight";
-import ControlsMobile from "../../../templates/zitat/controlsMobile";
-import Template from "../../../templates/zitat/template";
+import ControlsLeft from "../../../templates/zitat-insta-story/controlsLeft";
+import ControlsRight from "../../../templates/zitat-insta-story/controlsRight";
+import ControlsMobile from "../../../templates/zitat-insta-story/controlsMobile";
+import Template from "../../../templates/zitat-insta-story/template";
 import { Provider as DataContextProvider } from "../../../lib/useDataContext";
 import TemplateLayout from "../../../components/templateLayout";
 
-const PageZitat = () => {
+const PageZitatInsta = () => {
   const [state, setState] = useState({
     currentSlide: 0,
     activeFieldset: "",
@@ -26,7 +26,7 @@ const PageZitat = () => {
     ],
     colorTheme: "red_violet",
     templateScale: true,
-    format: { width: 1080, height: 1080 },
+    format: { width: 1080, height: 1920 },
   });
 
   return (
@@ -47,4 +47,4 @@ const PageZitat = () => {
   );
 };
 
-export default PageZitat;
+export default PageZitatInsta;
