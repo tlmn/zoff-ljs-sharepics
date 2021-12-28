@@ -7,6 +7,8 @@ import Textarea from "../../components/inputs/textarea";
 import TextScale from "../../components/inputs/textScale";
 import ColorSelect from "../../components/inputs/colorSelect";
 import BGImage from "../../components/inputs/bgImage";
+import CustomSelect from "../../components/inputs/customSelect";
+import { textPositions } from "../../config/vars";
 
 const ControlsMobile = () => {
   const currentSlide = 0;
@@ -41,6 +43,11 @@ const ControlsMobile = () => {
             label="Text"
             rows={4}
             cols={30}
+          />
+          <CustomSelect
+            label="Textposition"
+            propertyPath={`slides[${currentSlide}].data.body.textPosition`}
+            availableValues={textPositions}
           />
           <TextScale propertyPath="slides[0].data.body.scale" />
         </FieldSet>

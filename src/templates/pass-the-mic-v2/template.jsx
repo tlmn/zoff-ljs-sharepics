@@ -2,7 +2,7 @@ import React from "react";
 import DraggableBG from "../../components/inputs/draggableBg";
 import TemplateWrapper from "../../components/templateWrapper";
 import { formatEmojis, getPrimaryColor } from "../../lib/lib";
-
+import clsx from "clsx";
 import useDataContext from "../../lib/useDataContext";
 
 const Template = () => {
@@ -15,16 +15,19 @@ const Template = () => {
 
   return (
     <TemplateWrapper bgColor="#fff">
-      <div className="p-4 flex flex-col">
+      <div className="p-4 flex flex-col h-full">
         <span
           className="mb-3 text-center text-xl font-bold font-headline uppercase"
           dangerouslySetInnerHTML={{
             __html: category.content === "" ? "\u00a0" : category.content,
           }}
         />
-        <div className="flex-1 flex">
+        <div className="flex-1 flex pb-4">
           <span
-            className="block w-full self-center text-left text-black font-bold italic font-headline leading-none z-20"
+            className={clsx(
+              "block w-full text-left text-black font-bold italic font-headline leading-none z-20",
+              `self-${body.textPosition}`
+            )}
             style={{
               fontSize: `${body.scale.value}px`,
             }}
@@ -54,7 +57,7 @@ const Template = () => {
           <div className="w-[55%] aspect-square right-0">
             <DraggableBG propertyPath="slides[0].data.image.position" />
             <div
-              className="w-full h-full"
+              className="w-full h-full self-end"
               style={{
                 backgroundImage: `url(${
                   image.url !== null
