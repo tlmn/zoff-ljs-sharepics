@@ -41,7 +41,7 @@ label {
 }
 
 .btn {
-  @apply bg-green;
+  @apply bg-green !important;
   @apply uppercase;
   @apply text-darkGray;
   @apply font-headline;
