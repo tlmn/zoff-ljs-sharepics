@@ -48,7 +48,7 @@ export const updateProperty = (setState, path, newValue) => {
   });
 };
 
-export const getProperty = ({ state }, path) => {
+export const getProperty = (state, path) => {
   return get(state, path);
 };
 
