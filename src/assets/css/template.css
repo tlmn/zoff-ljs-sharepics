@@ -1,16 +1,10 @@
-.template {
-  width: 1080px;
-  height: 1080px;
-}
-
 .template-scale {
   transform: scale(0.5) translate(-50%, -50%);
 }
 
 .is-thumbnail {
-  transform: scale(0.1);
+  transform: scale(0.08);
   transform-origin: 0 0;
-  width: 9rem;
-  height: 9rem;
+  width: 6.5rem;
+  height: 6.5rem;
 }
-

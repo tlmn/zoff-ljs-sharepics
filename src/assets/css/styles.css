@@ -9,8 +9,14 @@
 
 .grid-12 {
   @apply grid-cols-12;
-  @apply gap-2;
+  @apply gap-1;
   @apply grid;
+}
+
+@screen md {
+  .grid-12 {
+    @apply gap-2;
+  }
 }
 
 .fill-green > svg > path {
