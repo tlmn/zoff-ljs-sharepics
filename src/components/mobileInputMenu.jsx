@@ -1,5 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import DownloadButton from "../components/inputs/downloadButton";
+import ArrowIcon from "../assets/svg/inputIcons/arrow";
 import { getScrollRight, mapToRange } from "../lib/lib";
 
 const MobileInputMenu = ({ children }) => {
@@ -22,16 +23,25 @@ const MobileInputMenu = ({ children }) => {
               opacity: mapToRange(ref?.current?.scrollLeft, 0, 40, 0, 0.7),
             }}
           />
+
           <DownloadButton className="m-1" />
           {children}
           <div
             className="absolute top-0 right-0 h-full"
             style={{
-              width: "15px",
+              width: "25px",
               background: "linear-gradient(to left, #000, rgba(0, 0, 0, 0))",
-              opacity: mapToRange(scrollRight, 40, 0, 0.7, 0),
+              opacity: mapToRange(scrollRight, 40, 0, 1, 0),
             }}
           />
+          <div
+            className="absolute top-0 bottom-0 max-w-min max-h-max right-[0.25rem] flex items-center rotate-180 shadow-sm"
+            style={{
+              opacity: mapToRange(scrollRight, 40, 0, 0.7, 0),
+            }}
+          >
+            <ArrowIcon />
+          </div>
         </div>
       </div>
     </>
