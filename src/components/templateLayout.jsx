@@ -29,7 +29,7 @@ const TemplateLayout = ({ children }) => {
               ? "bg-white w-screen h-screen fixed z-50 transition-all ease-in-out duration-75"
               : "hidden bg-transparent"
           )}
-        ></div>
+        />
         <div className="container grid-12">
           <div className="col-span-12">
             <Link
