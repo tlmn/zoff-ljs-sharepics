@@ -2,7 +2,6 @@ import React from "react";
 import MobileInputMenu from "../../../components/mobileInputMenu";
 import MenuItem from "../../../components/menuItem";
 import FieldSet from "../../../components/fieldSet";
-import DownloadButton from "../../../components/inputs/downloadButton";
 import TextScale from "../../../components/inputs/textScale";
 import Textarea from "../../../components/inputs/textarea";
 import ColorSelect from "../../../components/inputs/colorSelect";

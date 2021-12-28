@@ -5,7 +5,6 @@ import FieldSet from "../../../components/fieldSet";
 import TextScale from "../../../components/inputs/textScale";
 import Textarea from "../../../components/inputs/textarea";
 import Input from "../../../components/inputs/input";
-import DownloadButton from "../../../components/inputs/downloadButton";
 import ColorSelect from "../../../components/inputs/colorSelect";
 
 const ControlsMobile = () => {

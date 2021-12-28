@@ -4,7 +4,6 @@ import MenuItem from "../../../components/menuItem";
 import FieldSet from "../../../components/fieldSet";
 import BgImage from "../../../components/inputs/bgImage";
 import Input from "../../../components/inputs/input";
-import DownloadButton from "../../../components/inputs/downloadButton";
 import ColorThemesSelect from "../../../components/inputs/colorThemesSelect";
 
 const ControlsMobile = () => {
