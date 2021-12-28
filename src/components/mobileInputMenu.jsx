@@ -16,6 +16,14 @@ const MobileInputMenu = ({ children }) => {
           onScroll={() => setScrollRight(getScrollRight(ref))}
         >
           <div
+            className="absolute top-0 bottom-0 left-[0.25rem] flex items-center shadow-sm"
+            style={{
+              opacity: mapToRange(ref?.current?.scrollLeft, 0, 40, 0, 0.7),
+            }}
+          >
+            <ArrowIcon />
+          </div>
+          <div
             className="absolute top-0 left-0 h-full"
             style={{
               width: "15px",
