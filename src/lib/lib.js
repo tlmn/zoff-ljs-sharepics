@@ -2,13 +2,13 @@ import { cloneDeepWith, get, set } from "lodash";
 import { colorThemes, colors } from "../config/vars";
 
 import emojiRegex from "emoji-regex";
-import { toBlob } from "html-to-image";
+import { toJpeg } from "html-to-image";
 import { saveAs } from "file-saver";
 import slugify from "react-slugify";
 
 export const html2image = async (state, setState, fileName = "ljs") => {
   setState((prev) => ({ ...prev, templateScale: false }));
-  toBlob(state.slides[state.currentSlide].ref.current, {
+  toJpeg(state.slides[state.currentSlide].ref.current, {
     quality: 0.8,
     canvasWidth: state.format.width,
     canvasHeight: state.format.height,
