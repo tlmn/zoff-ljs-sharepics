@@ -1,16 +1,16 @@
 import React, { useRef, useState } from "react";
 
-import ControlsLeft from "../../../templates/pass-the-mic/controlsLeft";
-import ControlsRight from "../../../templates/pass-the-mic/controlsRight";
-import ControlsMobile from "../../../templates/pass-the-mic/controlsMobile";
-import Template from "../../../templates/pass-the-mic/template";
-import Template0 from "../../../templates/pass-the-mic/slide-0/template";
-import Template1 from "../../../templates/pass-the-mic/slide-1/template";
+import ControlsLeft from "../../../templates/pass-the-mic-v1/controlsLeft";
+import ControlsRight from "../../../templates/pass-the-mic-v1/controlsRight";
+import ControlsMobile from "../../../templates/pass-the-mic-v1/controlsMobile";
+import Template from "../../../templates/pass-the-mic-v1/template";
+import Template0 from "../../../templates/pass-the-mic-v1/slide-0/template";
+import Template1 from "../../../templates/pass-the-mic-v1/slide-1/template";
 import { Provider as DataContextProvider } from "../../../lib/useDataContext";
 import TemplateLayout from "../../../components/templateLayout";
 import ThumbnailButton from "../../../components/thumbnailButton";
 
-const PagePassTheMic = () => {
+const PagePassTheMicv2 = () => {
   const [state, setState] = useState({
     currentSlide: 0,
     activeFieldset: "",
@@ -78,4 +78,4 @@ const PagePassTheMic = () => {
   );
 };
 
-export default PagePassTheMic;
+export default PagePassTheMicv2;

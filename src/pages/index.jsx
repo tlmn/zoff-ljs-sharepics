@@ -5,14 +5,14 @@ import { templates } from "../config/vars";
 
 const PageIndex = () => (
   <Layout>
-    <div className="container px-2 grid grid-cols-12 gap-2  font-headline">
-      <div className="col-span-full text-center">
+    <div className="font-headline container grid grid-cols-12 gap-2 px-2">
+      <div className="text-center col-span-full">
         <h1 className="text-md md:text-xl text-green uppercase leading-tight italic py-3">
           Sharepic Generator <br /> linksjugend ['solid]
         </h1>
       </div>
       {templates.map(({ link, name, thumbnailSrc }) => (
-        <div className="col-span-6 sm:col-span-4 text-center" key={name}>
+        <div className="text-center col-span-6 sm:col-span-4" key={name}>
           <Link
             to={link}
             className="no-underline hover:text-green max-w-full flex flex-col md:flex-col-reverse "
@@ -20,10 +20,10 @@ const PageIndex = () => (
             <img
               src={thumbnailSrc}
               alt={name}
-              className="hover:opacity-75 transition-all ease-in-out duration-200 w-full"
+              className="w-full hover:opacity-75 transition-all ease-in-out duration-200"
             />
             <span
-              className="block text-base text-white uppercase pb-1 leading-tight mt-1"
+              className="text-base text-white uppercase block leading-tight pb-1 mt-1"
               dangerouslySetInnerHTML={{ __html: name }}
             />
           </Link>
