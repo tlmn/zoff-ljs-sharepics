@@ -33,9 +33,7 @@ const Image = ({ name: fileName, ...props }) => {
     }) => name === fileName
   );
 
-  return image ? (
-    <Img style={styles} {...image.node} {...props} />
-  ) : null;
+  return image ? <Img style={styles} {...image.node} {...props} /> : null;
 };
 
 export default Image;
