@@ -2,21 +2,33 @@ import { cloneDeepWith, get, set } from "lodash";
 import { colorThemes, colors } from "../config/vars";
 
 import emojiRegex from "emoji-regex";
-import { toJpeg } from "html-to-image";
 import { saveAs } from "file-saver";
 import slugify from "react-slugify";
+import axios from "axios";
+import { toSvg } from "html-to-image";
 
-export const html2image = async (state, setState, fileName = "ljs") => {
+export const getScreenshot = async (state, setState, fileName = "ljs") => {
   setState((prev) => ({ ...prev, templateScale: false }));
-  toJpeg(state.slides[state.currentSlide].ref.current, {
-    quality: 0.8,
+  toSvg(state.slides[state.currentSlide].ref.current, {
     canvasWidth: state.format.width,
     canvasHeight: state.format.height,
-  }).then((blob) => {
-    saveAs(blob, `sharepic-${slugify(fileName)}`);
+  }).then(async (blob) => {
+    await axios({
+      method: 'post',
+      url: process.env.GATSBY_API_URL,
+      headers: {
+        'Content-Type': 'text/plain'
+      },
+      data: `<img src="${blob}"/>`
+    })
+      .then(({ data }) => {
+        const blob = new Blob([data], { type: "image/png" });
+        saveAs(blob, `sharepic-${slugify(fileName)}.png`);
+      })
+      .catch(error => console.log(error))
     setState((prev) => ({ ...prev, templateScale: true }));
   });
-};
+}
 
 export const formatEmojis = (text = "") => {
   return text.replace(
