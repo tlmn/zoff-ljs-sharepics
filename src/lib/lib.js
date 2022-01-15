@@ -19,11 +19,12 @@ export const getScreenshot = async (state, setState, fileName = "ljs") => {
       headers: {
         "Content-Type": "text/plain",
       },
-      data: `<img src="${blob}" style="padding:0; margin:0; position: absolute; top: 0; left: 0;" />`,
+      data: `<img src="${blob}" style="padding: 0; margin: 0; position: absolute; top: 0; left: 0;" />`,
+      responseType: "image/png",
     })
-      .then(({ data }) => {
-        const blob = new Blob([data], { type: "image/png" });
-        saveAs(blob, `sharepic-${slugify(fileName)}.png`);
+      .then(async ({ data }) => {
+        let imageBlob = await new Blob([data], { type: "image/png" });
+        saveAs(imageBlob, `sharepic-${slugify(fileName)}.png`);
       })
       .catch((error) => console.log(error));
     setState((prev) => ({ ...prev, templateScale: true }));
