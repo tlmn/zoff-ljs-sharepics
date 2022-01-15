@@ -19,7 +19,7 @@ export const getScreenshot = async (state, setState, fileName = "ljs") => {
       headers: {
         "Content-Type": "text/plain",
       },
-      data: `<img src="${blob}"/>`,
+      data: `<img src="${blob}" style="padding:0; margin:0; position: absolute; top: 0; left: 0;" />`,
     })
       .then(({ data }) => {
         const blob = new Blob([data], { type: "image/png" });
