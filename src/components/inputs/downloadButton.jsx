@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import React from "react";
-import { getProperty, html2image } from "../../lib/lib";
+import { getProperty, getScreenshot } from "../../lib/lib";
 
 import useDataContext from "../../lib/useDataContext";
 
@@ -14,7 +14,7 @@ const DownloadButton = ({
     <button
       className={clsx("btn btn-download", className)}
       onClick={() =>
-        html2image(state, setState, getProperty(state, fileNamePath))
+        getScreenshot(state, setState, getProperty(state, fileNamePath))
       }
     >
       {buttonText}
