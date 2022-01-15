@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import ToMenuIcon from "../assets/svg/inputIcons/toMenu";
 import useDataContext from "../lib/useDataContext";
 import clsx from "clsx";
+import LogoArrow from "../assets/svg/logo-text";
 
 const TemplateLayout = ({ children }) => {
   const [windowHeight, setWindowHeight] = useState(0);
@@ -26,10 +27,13 @@ const TemplateLayout = ({ children }) => {
         <div
           className={clsx(
             !templateScale
-              ? "bg-white w-screen h-screen fixed z-50 transition-all ease-in-out duration-75"
+              ? "bg-white w-screen h-screen fixed z-50 transition-all ease-in-out duration-75 flex flex-col items-center justify-center"
               : "hidden bg-transparent"
           )}
-        />
+        >
+          <LogoArrow />
+          <h2 className="font-headline italic text-xl">Lade Sharepic</h2>
+        </div>
         <div className="container grid-12">
           <div className="col-span-12">
             <Link
