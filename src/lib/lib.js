@@ -20,10 +20,10 @@ export const getScreenshot = async (state, setState, fileName = "ljs") => {
         "Content-Type": "text/plain",
       },
       data: `<img src="${blob}" style="padding: 0; margin: 0; position: absolute; top: 0; left: 0;" />`,
-      responseType: "image/png",
+      responseType: "arraybuffer",
     })
-      .then(async ({ data }) => {
-        let imageBlob = await new Blob([data], { type: "image/png" });
+      .then(async ({ data: resData }) => {
+        let imageBlob = await new Blob([resData], { type: "image/png" });
         saveAs(imageBlob, `sharepic-${slugify(fileName)}.png`);
       })
       .catch((error) => console.log(error));
