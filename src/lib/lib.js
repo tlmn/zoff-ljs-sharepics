@@ -14,21 +14,21 @@ export const getScreenshot = async (state, setState, fileName = "ljs") => {
     canvasHeight: state.format.height,
   }).then(async (blob) => {
     await axios({
-      method: 'post',
+      method: "post",
       url: process.env.GATSBY_API_URL,
       headers: {
-        'Content-Type': 'text/plain'
+        "Content-Type": "text/plain",
       },
-      data: `<img src="${blob}"/>`
+      data: `<img src="${blob}"/>`,
     })
       .then(({ data }) => {
         const blob = new Blob([data], { type: "image/png" });
         saveAs(blob, `sharepic-${slugify(fileName)}.png`);
       })
-      .catch(error => console.log(error))
+      .catch((error) => console.log(error));
     setState((prev) => ({ ...prev, templateScale: true }));
   });
-}
+};
 
 export const formatEmojis = (text = "") => {
   return text.replace(
