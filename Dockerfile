@@ -11,8 +11,6 @@ COPY gatsby-config.js .
 
 ENV GATSBY_API_URL=https://sharepics-api.bv.linksjugend-solid.de
 
-RUN ls -al
-
 RUN npm install
 
 RUN node_modules/.bin/gatsby telemetry --disable && node_modules/.bin/gatsby build
