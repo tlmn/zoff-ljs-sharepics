@@ -1,7 +1,7 @@
 {
   "name": "zoff-ljs-sharepics",
   "description": "Social Media Sharepic Generator for Linksjugend ['solid]",
-  "version": "1.1",
+  "version": "1.1.0",
   "author": "mail@tlmn.io",
   "dependencies": {
     "axios": "^0.24.0",

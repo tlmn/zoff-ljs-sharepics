@@ -1,4 +1,6 @@
-image: node:latest
+include:
+  - remote: 'https://gitlab.com/syseleven/gitlab-ci-templates/raw/3.12.1/DockerBuild-kaniko.yml'
+  - remote: 'https://gitlab.com/syseleven/gitlab-ci-templates/raw/3.12.1/ContainerImageCVEScan.yml'
 
 cache:
   paths:
@@ -7,6 +9,7 @@ cache:
     - public/
 
 pages:
+  image: node:latest
   script:
     - npm install
     - ./node_modules/.bin/gatsby build --prefix-paths
