@@ -1,4 +1,4 @@
-FROM node:14 as builder
+FROM node:16 as builder
 
 WORKDIR /opt/sharepic-generator
 COPY src src
