@@ -9,7 +9,7 @@ COPY package.json .
 COPY gatsby-browser.js .
 COPY gatsby-config.js .
 
-ENV GATSBY_API_URL=http://sharepics_api:3000
+ENV GATSBY_API_URL=https://sharepics-api.bv.linksjugend-solid.de
 
 RUN ls -al
 
