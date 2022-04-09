@@ -1,7 +1,11 @@
 import React from "react";
 import DraggableBG from "../../components/inputs/draggableBg";
 import TemplateWrapper from "../../components/templateWrapper";
-import { formatEmojis, getPrimaryColor } from "../../lib/lib";
+import {
+  formatEmojis,
+  getPositionClassName,
+  getPrimaryColor,
+} from "../../lib/lib";
 import clsx from "clsx";
 import useDataContext from "../../lib/useDataContext";
 
@@ -24,7 +28,7 @@ const Template = () => {
           <span
             className={clsx(
               "block w-full text-left text-black font-bold italic font-headline leading-none z-20",
-              `self-${body.textPosition}`
+              getPositionClassName(body.textPosition)
             )}
             style={{
               fontSize: `${body.scale.value}px`,
@@ -52,7 +56,7 @@ const Template = () => {
           />
         </div>
         <div className="absolute w-full right-3 bottom-3 flex flex-col items-end">
-          <div className="w-[55%] aspect-square right-0">
+          <div className="w-[55%] aspect-square right-0 mr-0 ml-auto">
             <DraggableBG propertyPath="slides[0].data.image.position" />
             <div
               className="w-full h-full self-end"

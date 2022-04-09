@@ -1,5 +1,5 @@
 import React from "react";
-import { formatEmojis, getColor } from "../../lib/lib";
+import { formatEmojis, getColor, getPositionClassName } from "../../lib/lib";
 
 import DraggableBg from "../../components/inputs/draggableBg";
 import LogoArrow from "../../assets/svg/logo-arrow";
@@ -41,10 +41,10 @@ const Template = () => {
           backgroundSize: `${image.scale * 10 + 100}%`,
         }}
       />
-      <div className="p-4 relative h-full w-full flex flex-col break-all  border-1 z-20 ">
+      <div className="p-4 relative h-full w-full flex flex-col break-all border-1 z-20 ">
         <div className="flex-1 flex">
           <div
-            className={`h-full w-full flex items-${body.textPosition} justify-start`}
+            className={`w-full flex ${getPositionClassName(body.textPosition)} ml-0`}
           >
             <div
               className="stripeContainer mb-4"
