@@ -78,3 +78,16 @@ export const getScrollLeft = (ref) => {
 
 export const mapToRange = (value, x1, y1, x2, y2) =>
   ((value - x1) * (y2 - x2)) / (y1 - x1) + x2;
+
+export const getPositionClassName = (position) => {
+  switch (position) {
+    case "start":
+      return "mt-0";
+    case "center":
+      return "my-auto";
+    case "end":
+      return "mb-0 mt-auto";
+    default:
+      return "mt-0";
+  }
+};
