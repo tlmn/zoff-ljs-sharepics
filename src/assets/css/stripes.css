@@ -8,7 +8,10 @@
   @apply relative;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+  @apply w-full;
+  @apply whitespace-nowrap;
 }
+
 .stripeElement {
   @apply absolute;
   width: calc(100% + 3rem);

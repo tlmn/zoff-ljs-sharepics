@@ -11,8 +11,6 @@ const Template = () => {
     data: { category, body, author, image },
   } = state.slides[0];
 
-  console.log(author.content);
-
   return (
     <TemplateWrapper bgColor="#fff">
       <div className="p-4 flex flex-col h-full">

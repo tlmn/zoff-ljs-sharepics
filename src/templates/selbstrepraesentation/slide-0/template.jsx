@@ -15,7 +15,7 @@ const Template = ({ thumbnail = false }) => {
       isThumbnail={thumbnail}
       className="p-4 flex justify-center items-center"
     >
-      <div className="stripeContainer">
+      <div className="stripeContainer m-auto">
         <div className="stripeText" style={{ color: getColor(state, 0) }}>
           <div
             className="text-left font-headline italic font-bold"
