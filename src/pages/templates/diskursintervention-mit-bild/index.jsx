@@ -16,7 +16,7 @@ const PageDiskursinterventionMitBild = () => {
         data: {
           image: { url: null, position: { x: 0, y: 0 }, scale: 0 },
           body: {
-            content: "SPD: Oops, I did it again!",
+            content: "SPD: Oops,\nI did it again!",
             scale: { value: 100, range: [60, 150] },
             textPosition: "end",
           },
