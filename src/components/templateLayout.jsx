@@ -31,7 +31,9 @@ const TemplateLayout = ({ children }) => {
               : "hidden bg-transparent"
           )}
         >
-          <LogoArrow />
+          <div className="pulse">
+            <LogoArrow fillColor="#C9CEFF" />
+          </div>
           <h2 className="font-headline italic text-xl">Lade Sharepic</h2>
         </div>
         <div className="container grid-12">
