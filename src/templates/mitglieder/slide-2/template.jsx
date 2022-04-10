@@ -28,19 +28,21 @@ const Template = ({ thumbnail = false }) => {
           <div className="w-full flex justify-center">
             <LogoText fillColor={getColor(state, 0)} />
           </div>
-          <div
-            className="uppercase font-headline text-center text-md leading-none mt-2"
-            style={{
-              color: getColor(state, 0),
-              transform: "rotate(-6deg)",
-            }}
-            dangerouslySetInnerHTML={{
-              __html:
-                localGroup.content === ""
-                  ? "\u00a0"
-                  : localGroup.content.replace(/\n/gi, `<br />`),
-            }}
-          />
+          {localGroup.content !== "" && (
+            <div
+              className="uppercase font-headline text-center text-md leading-none mt-2"
+              style={{
+                color: getColor(state, 0),
+                transform: "rotate(-6deg)",
+              }}
+              dangerouslySetInnerHTML={{
+                __html:
+                  localGroup.content === ""
+                    ? "\u00a0"
+                    : localGroup.content.replace(/\n/gi, `<br />`),
+              }}
+            />
+          )}
         </div>
       </div>
     </TemplateWrapper>

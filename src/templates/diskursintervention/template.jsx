@@ -51,23 +51,23 @@ const Template = () => {
           }}
         />
       </div>
-      <div
-        className="w-full flex justify-center flex-col"
-      >
+      <div className="w-full flex justify-center flex-col">
         <LogoText className="mx-auto" fillColor={getColor(state, 1)} />
-        <div
-          className="uppercase font-headline text-center text-md leading-none mt-2"
-          style={{
-            color: getColor(state, 1),
-            transform: "rotate(-6deg)",
-          }}
-          dangerouslySetInnerHTML={{
-            __html:
-              localGroup.content === ""
-                ? "\u00a0"
-                : localGroup.content.replace(/\n/gi, `<br/>`),
-          }}
-        />
+        {localGroup.content !== "" && (
+          <div
+            className="uppercase font-headline text-center text-md leading-none mt-2"
+            style={{
+              color: getColor(state, 1),
+              transform: "rotate(-6deg)",
+            }}
+            dangerouslySetInnerHTML={{
+              __html:
+                localGroup.content === ""
+                  ? "\u00a0"
+                  : localGroup.content.replace(/\n/gi, `<br/>`),
+            }}
+          />
+        )}
       </div>
     </TemplateWrapper>
   );

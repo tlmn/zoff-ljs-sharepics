@@ -44,7 +44,9 @@ const Template = () => {
       <div className="p-4 relative h-full w-full flex flex-col break-all border-1 z-20 ">
         <div className="flex-1 flex">
           <div
-            className={`w-full flex ${getPositionClassName(body.textPosition)} ml-0`}
+            className={`w-full flex ${getPositionClassName(
+              body.textPosition
+            )} ml-0`}
           >
             <div
               className="stripeContainer mb-4"
@@ -75,19 +77,21 @@ const Template = () => {
         <div className="absolute right-0 bottom-0 mb-4 mr-4 z-20">
           <div className="flex items-center flex-col">
             <LogoArrow fillColor={getColor(state, 0)} />
-            <div
-              className="uppercase font-headline text-center text-md leading-none mt-2 ml-2"
-              style={{
-                color: getColor(state, 0),
-                transform: "rotate(-6deg)",
-              }}
-              dangerouslySetInnerHTML={{
-                __html:
-                  localGroup.content === ""
-                    ? "\u00a0"
-                    : localGroup.content.replace(/\n/gi, `<br/>`),
-              }}
-            />
+            {localGroup.content !== "" && (
+              <div
+                className="uppercase font-headline text-center text-md leading-none mt-2 ml-2"
+                style={{
+                  color: getColor(state, 0),
+                  transform: "rotate(-6deg)",
+                }}
+                dangerouslySetInnerHTML={{
+                  __html:
+                    localGroup.content === ""
+                      ? "\u00a0"
+                      : localGroup.content.replace(/\n/gi, `<br/>`),
+                }}
+              />
+            )}
           </div>
         </div>
       </div>
