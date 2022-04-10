@@ -34,7 +34,7 @@ const TemplateLayout = ({ children }) => {
           <div className="pulse">
             <LogoArrow fillColor="#C9CEFF" />
           </div>
-          <h2 className="font-headline italic text-xl">Lade Sharepic</h2>
+          <h2 className="font-headline italic text-xl text-red text-center leading-none mt-2">Lade Sharepic</h2>
         </div>
         <div className="container grid-12">
           <div className="col-span-12">
