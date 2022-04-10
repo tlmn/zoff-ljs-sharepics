@@ -33,7 +33,7 @@ const Template = ({ thumbnail = false }) => {
           }}
         />
         <div
-          className="stripeContainer z-40 mb-3 my-auto"
+          className="stripeContainer z-40 mb-3 mx-auto"
           style={{
             transform: "rotate(-6deg)",
           }}
