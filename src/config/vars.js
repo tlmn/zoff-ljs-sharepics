@@ -109,7 +109,7 @@ export const templates = [
   {
     name: "Pass the Mic v2",
     link: "templates/pass-the-mic-v2",
-    thumbnailSrc: "../assets/images/templates/pass-the-mic-v2.png",
+    thumbnailSrc: "../assets/images/templates/pass-the-mic-v2.jpg",
   },
   {
     name: "Veran&shy;staltung",
