@@ -15,7 +15,7 @@ const Template = () => {
     <TemplateWrapper className="p-4">
       <div className="flex">
         <span
-          className="block w-full self-center text-left italic font-bold font-headline leading-none break-word overflow-hidden"
+          className="block w-full self-center text-left italic font-bold font-headline leading-none break-word overflow-hidden mt-[12rem]"
           style={{
             fontSize: `${body.scale.value}px`,
             color: getColor(state, 1),
