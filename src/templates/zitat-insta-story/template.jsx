@@ -34,7 +34,7 @@ const Template = () => {
           color: getColor(state, 1),
         }}
       />
-      <div className="flex flex-col justify-center w-full mb-[12rem]">
+      <div className="flex flex-col justify-center w-full mt-[12rem]">
         <div className="w-full flex justify-center">
           <LogoText fillColor={getColor(state, 1)} />
         </div>
